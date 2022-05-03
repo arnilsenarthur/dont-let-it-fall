@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 133d0b9e9b3b14249af341685973ac1f, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: 
-  value: {x: 0, y: 0, z: 0}
+  value: {x: 25, y: 25, z: 0}
   key: playerPos

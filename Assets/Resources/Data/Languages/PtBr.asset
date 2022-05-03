@@ -22,4 +22,11 @@ MonoBehaviour:
 
 
     ui.interaction.grab=Use
-    {0} to grab  kk'
+    Brasil to grab  kk
+
+
+    ui.value.coins=Coins: {0}
+
+
+    input.player.movex=Move
+    X'

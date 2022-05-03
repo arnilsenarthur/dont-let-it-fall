@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections.Generic;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace DontLetItFall.Data
 {
@@ -35,7 +38,7 @@ namespace DontLetItFall.Data
         private Dictionary<string, Language> parsedLanguages = new Dictionary<string, Language>();
         #endregion
 
-        private void Init()
+        public void Init()
         {
             foreach (Language language in languages)
             {
@@ -49,4 +52,22 @@ namespace DontLetItFall.Data
             return parsedLanguages[currentLanguage].Localize(key, args);
         }
     }
+
+#if UNITY_EDITOR
+    [CustomEditor(typeof(LanguageManager))]
+    public class LanguageManagerEditor : Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
+
+            if (GUILayout.Button("Update Languages"))
+            {
+                LanguageManager languageManager = (LanguageManager)target;
+                languageManager.Init();
+            }
+        }
+    }
+#endif
 }
+

@@ -1,5 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace DontLetItFall.Data
 {
@@ -40,4 +43,21 @@ namespace DontLetItFall.Data
             return key + "???";
         }
     }
+
+    #if UNITY_EDITOR
+    [CustomEditor(typeof(Language))]
+    public class LanguageEditor : Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
+
+            if (GUILayout.Button("Reload Entries"))
+            {
+                ((Language)target).UpdateEntries();
+                LanguageManager.Instance.onChangeLanguage.Invoke();
+            }
+        }
+    }
+    #endif
 }
