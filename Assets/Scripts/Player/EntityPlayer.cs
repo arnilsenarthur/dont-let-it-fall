@@ -15,6 +15,15 @@ namespace DontLetItFall.Entity.Player
         public PlayerInteractionType type;
         public GameObject targetObject;
     }
+    
+    [System.Serializable]
+    public class Limb
+    {
+        public ConfigurableJoint joint;
+        public Transform target;
+        public float assembledPositionSpring = 60f;
+        public float disassembledPositionSpring = 5f;
+    }
 
     public class EntityPlayer : EntityBase
     {
@@ -44,17 +53,11 @@ namespace DontLetItFall.Entity.Player
         public LayerMask groundLayerMask;
 
         [Header("LIMBS")]
+        public Limb[] limbs;
         public GameObject limbsParent;
-        public ConfigurableJoint[] limbs;
-        public Transform[] targetLimbs;
 
         [Header("GRAB")]
         public GrabLimb[] grabLimbs;
-
-        [Header("JOINTS")]
-        public ConfigurableJoint[] joints;
-        public float assembledPositionSpring = 60f;
-        public float disassembledPositionSpring = 5f;
 
         [Header("STATE")]
         public bool isGrounded = false;
@@ -72,9 +75,11 @@ namespace DontLetItFall.Entity.Player
             _rigidbody = GetComponent<Rigidbody>();
             _startLimbRotations = new Quaternion[limbs.Length];
             for (int i = 0; i < limbs.Length; i++)
-                _startLimbRotations[i] = limbs[i].transform.localRotation;
+                _startLimbRotations[i] = limbs[i].joint.transform.localRotation;
 
             _rigidbody.centerOfMass = Vector3.down;
+
+            SetAssembled(true);
         }
 
         private void Update()
@@ -85,8 +90,9 @@ namespace DontLetItFall.Entity.Player
             #region Animation
             for (int i = 0; i < limbs.Length; i++)
             {
-                Quaternion target = targetLimbs[i].localRotation;
-                ConfigurableJointExtensions.SetTargetRotationLocal(limbs[i], target, _startLimbRotations[i]);
+                Limb limb = limbs[i];
+                Quaternion target = limb.target.localRotation;
+                ConfigurableJointExtensions.SetTargetRotationLocal(limb.joint, target, _startLimbRotations[i]);
             }
             #endregion
         }
@@ -175,14 +181,15 @@ namespace DontLetItFall.Entity.Player
             bodyHips.isKinematic = assembled;
             _assembled = assembled;
 
-            foreach (ConfigurableJoint joint in joints)
+            foreach (Limb limb in limbs)
             {
+                ConfigurableJoint joint = limb.joint;
                 JointDrive drive = joint.angularXDrive;
-                drive.positionSpring = assembled ? assembledPositionSpring : disassembledPositionSpring;
+                drive.positionSpring = assembled ? limb.assembledPositionSpring : limb.disassembledPositionSpring;
                 joint.angularXDrive = drive;
 
                 drive = joint.angularYZDrive;
-                drive.positionSpring = assembled ? assembledPositionSpring : disassembledPositionSpring;
+                drive.positionSpring = assembled ? limb.assembledPositionSpring : limb.disassembledPositionSpring;
                 joint.angularYZDrive = drive;
             }
         }
