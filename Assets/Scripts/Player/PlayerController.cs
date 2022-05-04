@@ -102,43 +102,45 @@ namespace DontLetItFall.Player
             );
             #endregion
 
-            #region Input
-            Vector3 input = new Vector3(this.input.moveX, 0f, this.input.moveY).normalized;
-            lastInput = input;
-            #endregion
-
-            #region Walk
-            float y = _rigidbody.velocity.y;
-            Vector3 velocity = input * walkSpeed;
-            velocity.y = y;
-            _rigidbody.velocity = velocity;
-            #endregion
-
-            #region Jump
-            if (this.input.jump && isGrounded)
+            if (_player.Assembled)
             {
-                _rigidbody.velocity += Vector3.up * 8f;
-            }
-            #endregion
+                #region Input
+                Vector3 input = new Vector3(this.input.moveX, 0f, this.input.moveY).normalized;
+                lastInput = input;
+                #endregion
 
-            #region Rotation
-            //Rotate towards input
-            if (input.magnitude > 0f)
-            {
-                Quaternion targetRotation = Quaternion.LookRotation(input);
-                bodyParts.rotation = Quaternion.Slerp(bodyParts.rotation, targetRotation, Time.fixedDeltaTime * rotationSpeed);
-                bodyParts.localEulerAngles = new Vector3(0f, bodyParts.localEulerAngles.y, 0f);
-            }
-            #endregion
+                #region Walk
+                float y = _rigidbody.velocity.y;
+                Vector3 velocity = input * walkSpeed;
+                velocity.y = y;
+                _rigidbody.velocity = velocity;
+                #endregion
 
-            #region Self-Balance
-            if (_keepBalance)
-            {
-                Quaternion target = Quaternion.identity;
-                _rigidbody.MoveRotation(Quaternion.Slerp(transform.rotation, target, Time.fixedDeltaTime * balanceForce));
-            }
-            #endregion
+                #region Jump
+                if (this.input.jump && isGrounded)
+                {
+                    _rigidbody.velocity += Vector3.up * 8f;
+                }
+                #endregion
 
+                #region Rotation
+                //Rotate towards input
+                if (input.magnitude > 0f)
+                {
+                    Quaternion targetRotation = Quaternion.LookRotation(input);
+                    bodyParts.rotation = Quaternion.Slerp(bodyParts.rotation, targetRotation, Time.fixedDeltaTime * rotationSpeed);
+                    bodyParts.localEulerAngles = new Vector3(0f, bodyParts.localEulerAngles.y, 0f);
+                }
+                #endregion
+
+                #region Self-Balance
+                if (_keepBalance)
+                {
+                    Quaternion target = Quaternion.identity;
+                    _rigidbody.MoveRotation(Quaternion.Slerp(transform.rotation, target, Time.fixedDeltaTime * balanceForce));
+                }
+                #endregion
+            }
         }
 
         private void UpdateKeepBalance()

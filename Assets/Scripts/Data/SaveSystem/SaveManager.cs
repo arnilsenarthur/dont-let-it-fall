@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -13,6 +14,10 @@ namespace DontLetItFall.Data
     public class SaveData
     {
         public string language = "ptBR";
+
+        public float masterVolume = 1f;
+        public float musicVolume = 1f;
+        public float sfxVolume = 1f;
     }
 
     [System.Serializable]
@@ -62,6 +67,8 @@ namespace DontLetItFall.Data
                 return _saveData;
             }
         }
+
+        public AudioMixer mixer;
         #endregion
 
         #region Private Fields
@@ -120,6 +127,14 @@ namespace DontLetItFall.Data
                 FieldInfo field = typeof(SaveData).GetField(fieldName);
                 reference.variable.SetValue(field.GetValue(_saveData));
             }
+
+            _saveData.masterVolume = Mathf.Clamp(_saveData.masterVolume,0.0001f,1f);
+            _saveData.musicVolume = Mathf.Clamp(_saveData.musicVolume,0.0001f,1f);
+            _saveData.sfxVolume = Mathf.Clamp(_saveData.sfxVolume,0.0001f,1f);
+
+            mixer.SetFloat("MasterVolume", Mathf.Log10(_saveData.masterVolume) * 20);
+            mixer.SetFloat("MusicVolume", Mathf.Log10(_saveData.musicVolume) * 20);
+            mixer.SetFloat("SFXVolume", Mathf.Log10(saveData.sfxVolume) * 20);
         }
     }
 

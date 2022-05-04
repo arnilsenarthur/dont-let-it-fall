@@ -40,8 +40,8 @@ MonoBehaviour:
   - unlocalizedName: input.player.grab
     name: Grab
     value:
-      type: 3
+      type: 0
       stringValue: Vertical
-      keyValue: 32
+      keyValue: 304
       intValue: 0
       mouseInputValue: 0
