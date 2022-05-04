@@ -27,7 +27,7 @@ namespace DontLetItFall.Player
 
             float walkAnim = Mathf.Sin(Time.time * Mathf.Deg2Rad * walkAnimSpeed);
 
-            walkAnim = controller.lastInput.magnitude * walkAnim;
+            walkAnim = controller.currentMoveInput.magnitude * walkAnim;
 
             LegA.localEulerAngles = walkAnimMax * walkAnim;
             LegB.localEulerAngles = walkAnimMax * -walkAnim;
