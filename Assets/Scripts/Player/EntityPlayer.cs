@@ -15,7 +15,7 @@ namespace DontLetItFall.Entity.Player
         public PlayerInteractionType type;
         public GameObject targetObject;
     }
-    
+
     [System.Serializable]
     public class Limb
     {
@@ -55,6 +55,7 @@ namespace DontLetItFall.Entity.Player
         [Header("LIMBS")]
         public Limb[] limbs;
         public GameObject limbsParent;
+        public int headIndex = 0;
 
         [Header("GRAB")]
         public GrabLimb[] grabLimbs;
@@ -94,6 +95,24 @@ namespace DontLetItFall.Entity.Player
                 Quaternion target = limb.target.localRotation;
                 ConfigurableJointExtensions.SetTargetRotationLocal(limb.joint, target, _startLimbRotations[i]);
             }
+            #endregion
+
+            #region Head Look At
+            /*
+            Vector3 playerForward = limbsParent.transform.forward;
+            Vector3 viewTarget = Camera.main.transform.position;
+            Limb head = limbs[headIndex];
+            Vector3 dir = viewTarget - head.joint.transform.position;
+
+            if (Vector3.Dot(playerForward, dir) > 0)
+            {
+                Quaternion r = Quaternion.LookRotation(dir);
+                r = r * Quaternion.Inverse(head.joint.transform.parent.rotation);
+                head.joint.SetTargetRotationLocal(r, _startLimbRotations[headIndex]);
+            }
+            else
+                head.joint.targetRotation = Quaternion.identity;
+            */
             #endregion
         }
 

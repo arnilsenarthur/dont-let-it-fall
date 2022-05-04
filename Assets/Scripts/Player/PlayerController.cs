@@ -92,7 +92,7 @@ namespace DontLetItFall.Player
                     Transform transform = _player.limbsParent.transform;
                     Quaternion targetRotation = Quaternion.LookRotation(input);
                     transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.fixedDeltaTime * _player.rotationSpeed);
-                    transform.transform.localEulerAngles = new Vector3(0f, transform.localEulerAngles.y, 0f);
+                    transform.localEulerAngles = new Vector3(0f, transform.localEulerAngles.y, 0f);
                 }
                 #endregion
 

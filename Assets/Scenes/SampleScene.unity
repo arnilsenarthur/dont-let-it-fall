@@ -3565,6 +3565,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2565424579847004656, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
+      propertyPath: m_AngularXMotion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565424579847004656, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
+      propertyPath: m_AngularYMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565424579847004656, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
+      propertyPath: m_AngularYLimit.limit
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565424579847004656, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
+      propertyPath: m_AngularZLimit.limit
+      value: 177
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565424579847004656, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
+      propertyPath: m_LowAngularXLimit.limit
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565424579847004656, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
+      propertyPath: m_HighAngularXLimit.limit
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914488375100705190, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
+      propertyPath: walkSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914488375100705190, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
+      propertyPath: rotationSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7914488375100705190, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
       propertyPath: limbs.Array.data[0].target
       value: 
