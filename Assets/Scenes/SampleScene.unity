@@ -369,6 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909175e59e2555f47acdce2678cf72ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputManager: {fileID: 0}
 --- !u!1 &104666450
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,7 +385,7 @@ GameObject:
   - component: {fileID: 104666452}
   - component: {fileID: 104666456}
   m_Layer: 7
-  m_Name: Sphere
+  m_Name: GrabLimb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -498,6 +499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hand: {fileID: 4915516367968249324}
   player: {fileID: 721655301}
+  currentObject: {fileID: 0}
 --- !u!1 &175266374
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +559,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[ui.interaction.grab]'
+  m_text: '<size=30>{input:Grab}</size>
+
+    [ui.interaction.grab]
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -600,7 +606,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -646,6 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909175e59e2555f47acdce2678cf72ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputManager: {fileID: 11400000, guid: 3e9dc3ed3584682469c8d560cc3a7fb0, type: 2}
 --- !u!1 &316176405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,7 +1345,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 897424964}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.61
+  m_Size: 0.4
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1510,6 +1517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 71e2381ecbcdd9f4480d3e32081dc4dc, type: 2}
+  grabbedObject: {fileID: 0}
   OnCanInteractWithObject:
     m_PersistentCalls:
       m_Calls:
@@ -1540,6 +1548,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  grabLimbs:
+  - {fileID: 104666456}
+  - {fileID: 1605825146}
 --- !u!114 &721655302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1557,6 +1568,7 @@ MonoBehaviour:
     moveX: 0
     moveY: 0
     jump: 0
+    grabbing: 0
   walkSpeed: 3
   balanceForce: 8
   rotationSpeed: 5
@@ -1592,7 +1604,7 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: e60915c5920493542bba6b8e234e33a1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.45
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -2072,7 +2084,7 @@ RectTransform:
   m_Father: {fileID: 316176406}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.39}
+  m_AnchorMin: {x: 0, y: 0.6}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -2616,7 +2628,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030767295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6197152, y: -1.5494996, z: 1.7143344}
+  m_LocalPosition: {x: -0.6197152, y: -1.5494996, z: -3.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3401,7 +3413,7 @@ GameObject:
   - component: {fileID: 1605825147}
   - component: {fileID: 1605825146}
   m_Layer: 7
-  m_Name: Sphere
+  m_Name: GrabLimb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3436,6 +3448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hand: {fileID: 2940487266379663924}
   player: {fileID: 721655301}
+  currentObject: {fileID: 0}
 --- !u!135 &1605825147
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3753,9 +3766,11 @@ GameObject:
   - component: {fileID: 1623191987}
   - component: {fileID: 1623191986}
   - component: {fileID: 1623191985}
+  - component: {fileID: 1623191991}
+  - component: {fileID: 1623191992}
   m_Layer: 0
   m_Name: Capsule (2)
-  m_TagString: Untagged
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3862,13 +3877,40 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623191984}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.749715, y: -1.7994996, z: -3.7456656}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -6.749715, y: -0.88, z: -3.7456656}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1868600898}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1623191991
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623191984}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.75
+  m_Height: 2.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1623191992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623191984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f06b8ad16eec6489df57a207460779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balanceForce: 5
 --- !u!1 &1665748922
 GameObject:
   m_ObjectHideFlags: 0
@@ -4659,10 +4701,10 @@ RectTransform:
   m_Father: {fileID: 574099399}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -200, y: 200}
+  m_SizeDelta: {x: -200, y: -200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2127865852
 MonoBehaviour:
@@ -4918,12 +4960,12 @@ ConfigurableJoint:
   m_RotationDriveMode: 0
   m_AngularXDrive:
     serializedVersion: 3
-    positionSpring: 15
+    positionSpring: 60
     positionDamper: 0
     maximumForce: 3.4028233e+38
   m_AngularYZDrive:
     serializedVersion: 3
-    positionSpring: 15
+    positionSpring: 60
     positionDamper: 0
     maximumForce: 3.4028233e+38
   m_SlerpDrive:
@@ -6054,12 +6096,12 @@ ConfigurableJoint:
   m_RotationDriveMode: 0
   m_AngularXDrive:
     serializedVersion: 3
-    positionSpring: 15
+    positionSpring: 60
     positionDamper: 0
     maximumForce: 3.4028233e+38
   m_AngularYZDrive:
     serializedVersion: 3
-    positionSpring: 15
+    positionSpring: 60
     positionDamper: 0
     maximumForce: 3.4028233e+38
   m_SlerpDrive:

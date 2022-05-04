@@ -29,7 +29,6 @@ namespace DontLetItFall.Data
         #endregion
 
         #region Public Fields
-        public string currentLanguage = "ptBR";
         public Language[] languages;
         public UnityEvent onChangeLanguage;
         #endregion
@@ -43,13 +42,17 @@ namespace DontLetItFall.Data
             foreach (Language language in languages)
             {
                 language.UpdateEntries();
-                parsedLanguages.Add(language.unlocalizedName, language);
+                parsedLanguages[language.unlocalizedName] = language;
             }
         }
 
         public string Localize(string key, params string[] args)
         {
-            return parsedLanguages[currentLanguage].Localize(key, args);
+            Language lang;
+            if (parsedLanguages.TryGetValue(SaveManager.Data.language, out lang))
+                return lang.Localize(key, args);
+            else
+                return key + "???";
         }
     }
 

@@ -53,11 +53,25 @@ namespace DontLetItFall.UI
                     Binding b = group.manager.GetBinding(binding);
 
                     info.objects[0].GetComponent<TextMeshProUGUI>().text = "[" + b.unlocalizedName + "]";
-                    info.objects[1].GetComponent<TextMeshProUGUI>().text = b.value.GetUnlocalizedName();
+                    info.objects[1].GetComponent<TextMeshProUGUI>().text = b.value.ToSpriteIcon();
                 
                     item.SetActive(true);
                 }            
             }
+
+            string s = "";
+
+            foreach(KeyCode code in System.Enum.GetValues(typeof(KeyCode)))
+            {
+                s += "key_ " + code.ToString().ToLower() + "\n";
+            }
+
+            Debug.Log(s);
+        }
+
+        private void Update()
+        {
+            
         }
     }
 }

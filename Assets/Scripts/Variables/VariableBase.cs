@@ -7,7 +7,7 @@ using System;
 
 namespace DontLetItFall.Variables
 {
-    public class Variable : ScriptableObject
+    public abstract class Variable : ScriptableObject
     {
         protected static Dictionary<string, Variable> variables = new Dictionary<string, Variable>();
 
@@ -20,6 +20,8 @@ namespace DontLetItFall.Variables
             else
                 return null;
         }
+
+        public abstract void SetValue(object value);
     }
 
 
@@ -40,6 +42,11 @@ namespace DontLetItFall.Variables
         public override string ToString()
         {
             return value.ToString();
+        }
+
+        public override void SetValue(object value)
+        {
+            this.value = (T)value;
         }
     }
 

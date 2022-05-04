@@ -37,7 +37,7 @@ namespace DontLetItFall.Data
         {
             if (parsedEntries.ContainsKey(key))
             {
-                return string.Format(parsedEntries[key], args);
+                return string.Format(parsedEntries[key], args).Replace("\\n", "\n");
             }
 
             return key + "???";

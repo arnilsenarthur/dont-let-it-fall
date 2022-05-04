@@ -8,6 +8,7 @@ using UnityEditor;
 using TMPro;
 using DontLetItFall.Data;
 using DontLetItFall.Variables;
+using DontLetItFall.InputSystem;
 
 namespace DontLetItFall.UI
 {
@@ -20,6 +21,7 @@ namespace DontLetItFall.UI
         private static string[] argsCache = new string[16];
         private List<Variable> usedVariables = new List<Variable>();
 
+        public InputManager inputManager;
 
         public string text
         {
@@ -40,16 +42,7 @@ namespace DontLetItFall.UI
         {
             text = initialText;
 
-            /*
-            foreach (Match match in variablesPattern.Matches(text))
-            {
-                string key = match.Groups[1].Value;
-                Variable.Variable v = Variable.Variable.GetVariable(key);
-                v.OnChange -= ReloadText;
-            }
-            */
-            
-            foreach(Variable v in usedVariables)
+            foreach (Variable v in usedVariables)
                 v.OnChange -= ReloadText;
             usedVariables.Clear();
 
@@ -116,12 +109,20 @@ namespace DontLetItFall.UI
 
             }
 
-            if(type == 1)
-                return LanguageManager.Instance.Localize(cache.Trim(),argsCache);
-            else if(type == 2)
+            if (type == 1)
             {
-                Variable v = Variable.GetVariable(cache.Trim());
-                if(v == null)
+                return LanguageManager.Instance.Localize(cache.Trim(), argsCache);
+            }
+            else if (type == 2)
+            {
+                string name = cache.Trim();
+                if (name.StartsWith("input:"))
+                {
+                    return inputManager.GetBinding(name.Substring(6)).value.ToSpriteIcon();
+                }
+
+                Variable v = Variable.GetVariable(name);
+                if (v == null)
                     return cache + "???";
 
                 v.OnChange -= ReloadText;

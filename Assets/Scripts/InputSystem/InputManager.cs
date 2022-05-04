@@ -61,6 +61,16 @@ namespace DontLetItFall.InputSystem
         [SerializeField]
         private MouseInputEnum mouseInputValue;
 
+        public string ToSpriteIcon()
+        {
+            return ToSpriteIcon(GetUnlocalizedName());
+        }
+
+        public static string ToSpriteIcon(string name)
+        {
+            return "<sprite=\"bindings\" name=\"" + name + "\">";
+        }
+
         public string GetUnlocalizedName()
         {
             switch (type)
@@ -84,7 +94,7 @@ namespace DontLetItFall.InputSystem
                             return "mouse_scroll";
                         default:
                             return "???";
-                            
+
                     }
                 case BindingType.Touch:
                     return "touch_" + intValue;

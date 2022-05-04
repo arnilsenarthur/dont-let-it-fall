@@ -1,6 +1,7 @@
 using UnityEngine;
 using DontLetItFall.InputSystem;
 using DontLetItFall.Utils;
+using DontLetItFall.Entity.Player;
 
 namespace DontLetItFall.Player
 {
@@ -15,6 +16,9 @@ namespace DontLetItFall.Player
 
         [Binding("Jump", BindingMode.Down)]
         public bool jump;
+
+        [Binding("Grab", BindingMode.Default)]
+        public bool grabbing;
     }
 
     public class PlayerController : MonoBehaviour
@@ -52,11 +56,13 @@ namespace DontLetItFall.Player
         private Quaternion[] _startLimbRotations;
         private Rigidbody _rigidbody;
         private bool _keepBalance = true;
+        private EntityPlayer _player = null;
         #endregion
 
         #region Private Methods
         private void Start()
         {
+            _player = GetComponent<EntityPlayer>();
             _rigidbody = GetComponent<Rigidbody>();
             _startLimbRotations = new Quaternion[limbs.Length];
             for (int i = 0; i < limbs.Length; i++)
@@ -71,6 +77,15 @@ namespace DontLetItFall.Player
             {
                 Quaternion target = targetLimbs[i].localRotation;
                 ConfigurableJointExtensions.SetTargetRotationLocal(limbs[i], target, _startLimbRotations[i]);
+            }
+
+            if (input.grabbing && _player.grabbedObject == null)
+            {
+                _player.GrabObject();
+            }
+            else if (!input.grabbing && _player.grabbedObject != null)
+            {
+                _player.ReleaseObject();
             }
         }
 
