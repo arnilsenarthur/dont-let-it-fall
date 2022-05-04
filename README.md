@@ -4,15 +4,15 @@
 
 ![](https://img.shields.io/github/stars/arnilsenarthur/dont-let-it-fall.svg) ![](https://img.shields.io/github/tag/arnilsenarthur/dont-let-it-fall.svg) ![](https://img.shields.io/github/release/arnilsenarthur/dont-let-it-fall.svg) ![](https://img.shields.io/github/issues/arnilsenarthur/dont-let-it-fall.svg)
 
-##Authors##
-- Árnilsen Arthur Lopes
+## Authors
+- Árnilsen Arthur Castilho Lopes 
 - Júlia Moraes de Freitas
 - Lucas Quinino
 - Luiz Felipe Bozzi
-- Renzo Diniz
-- Sérgio Macellani
+- Renzo Santos Diniz
+- Sérgio Oliveira Macellani
 
-##Task List (Build no. 3)##
+## Task List (Build no. 3)
 - [x] Boat Balance System
 - [x] Simple Player Controller
 - [x] Player Active Ragdoll
