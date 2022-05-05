@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using DontLetItFall.Data;
 using DontLetItFall.Utils;
+using DontLetItFall.Variables;
 
 namespace DontLetItFall.Entity.Player
 {
@@ -29,8 +30,7 @@ namespace DontLetItFall.Entity.Player
     {
         public PlayerStats stats;
         public Rigidbody bodyHips;
-        public GameObject grabbedObject = null;
-
+        
         #region Events
         public UnityEvent<PlayerInteraction> OnCanInteractWithObject;
         public UnityEvent<PlayerInteraction> OnStopCanInteractWithObject;
@@ -50,8 +50,12 @@ namespace DontLetItFall.Entity.Player
         public float wakeUpSpeed = 1f;
         public float balanceForce = 3f;
         public float rotationSpeed = 5f;
+        public float rotationSpeedWhileCarrying = 1f;
         public LayerMask groundLayerMask;
         public float groundCheckDistance = 0.8f;
+        public float jumpForce = 15f;
+        public float gravityForce = 20f;
+        public AnimationCurve walkSpeedWeightMultiplier;
 
         [Header("LIMBS")]
         public Limb[] limbs;
@@ -64,6 +68,8 @@ namespace DontLetItFall.Entity.Player
         [Header("STATE")]
         public bool isGrounded = false;
         public Vector3 groundNormal = Vector3.up;
+        public GameObject grabbedObject;
+        public Value<float> grabbedWeight;
         #endregion
 
         #region Private Fields
@@ -88,18 +94,24 @@ namespace DontLetItFall.Entity.Player
             SetAssembled(true);
         }
 
+        public float GetWalkSpeed()
+        {
+            return walkSpeedWeightMultiplier.Evaluate(grabbedWeight.value) * walkSpeed;
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.J))
                 SetAssembled(!_assembled);
 
             #region Animation
-            for (int i = 0; i < limbs.Length; i++)
-            {
-                Limb limb = limbs[i];
-                Quaternion target = limb.target.localRotation;
-                ConfigurableJointExtensions.SetTargetRotationLocal(limb.joint, target, _startLimbRotations[i]);
-            }
+            if (_assembled)
+                for (int i = 0; i < limbs.Length; i++)
+                {
+                    Limb limb = limbs[i];
+                    Quaternion target = limb.target.localRotation;
+                    ConfigurableJointExtensions.SetTargetRotationLocal(limb.joint, target, _startLimbRotations[i]);
+                }
             #endregion
 
             #region Head Look At
@@ -124,24 +136,42 @@ namespace DontLetItFall.Entity.Player
         private void FixedUpdate()
         {
             #region Update Grounded
-            
-            isGrounded = UnityEngine.Physics.CheckSphere(transform.position - new Vector3(0,groundCheckDistance,0),0.25f,groundLayerMask);
+            isGrounded = UnityEngine.Physics.CheckSphere(transform.position - new Vector3(0, groundCheckDistance, 0), 0.25f, groundLayerMask);
+            #endregion
+
+            Vector3 velocity = _rigidbody.velocity;
 
             if (isGrounded)
             {
-                if(UnityEngine.Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 1.1f, groundLayerMask))
+                #region Ground Normal 
+                if (UnityEngine.Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 1.1f, groundLayerMask))
                 {
                     groundNormal = hit.normal;
                 }
-            }
-            #endregion
+                #endregion
 
-            //Stand Assembled
+                //velocity.y = Mathf.Max(velocity.y, 0f);
+                //velocity -= groundNormal * 9.81f * Time.fixedDeltaTime;
+            }
+            else
+            {
+                velocity.y -= gravityForce * Time.fixedDeltaTime;
+            }
+
             if (_assembled)
             {
+                //Stand Up
                 bodyHips.transform.localRotation = Quaternion.Lerp(bodyHips.transform.localRotation, Quaternion.identity, Time.deltaTime * wakeUpSpeed);
                 bodyHips.transform.localPosition = Vector3.Lerp(bodyHips.transform.localPosition, _bodyHipsOffset, Time.deltaTime * wakeUpSpeed);
             }
+            else
+            {
+                //Drag
+                velocity.x *= 1f - Time.fixedDeltaTime * 2;
+                velocity.z *= 1f - Time.fixedDeltaTime * 2;
+            }
+
+            _rigidbody.velocity = velocity;
         }
         #endregion
 
@@ -156,6 +186,7 @@ namespace DontLetItFall.Entity.Player
                         return;
 
                     grabbedObject = limb.currentObject;
+                    grabbedWeight.value = grabbedObject.GetComponent<Rigidbody>().mass;
 
                     /*
                     ConfigurableJoint joint = grabbedObject.AddComponent<ConfigurableJoint>();
@@ -172,12 +203,12 @@ namespace DontLetItFall.Entity.Player
                     joint.linearLimit = new SoftJointLimit(){limit = 0.01f};
                     */
 
-                    FixedJoint joint = grabbedObject.AddComponent<FixedJoint>();
+                    FixedJoint joint = grabbedObject.gameObject.AddComponent<FixedJoint>();
                     joint.connectedBody = limb.hand;
                     joint.breakForce = 500;
 
                     PlayerInteraction interaction = new PlayerInteraction();
-                    interaction.targetObject = grabbedObject;
+                    interaction.targetObject = grabbedObject.gameObject;
                     interaction.type = PlayerInteractionType.Grab;
 
                     OnStopCanInteractWithObject.Invoke(interaction);
@@ -190,17 +221,16 @@ namespace DontLetItFall.Entity.Player
             if (grabbedObject != null)
             {
                 foreach (Joint joint in grabbedObject.GetComponents<Joint>())
-                {
                     Destroy(joint);
-                }
 
+                grabbedWeight.value = 0;
                 grabbedObject = null;
             }
         }
 
         public void Jump()
         {
-            _rigidbody.velocity += (_rigidbody.velocity.y * Vector3.down) + Vector3.up * 8f;
+            _rigidbody.velocity += (_rigidbody.velocity.y * Vector3.down) + Vector3.up * jumpForce;
         }
         #endregion
 

@@ -5,7 +5,7 @@ namespace DontLetItFall
 {
     public class World : MonoBehaviour
     {
-        public float secondsPerDay = 20f;
+        public static string[] weekyDays = {"sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"};
 
         #region Inspector Variables
         public Value<float> worldTime;
@@ -13,12 +13,16 @@ namespace DontLetItFall
         public Value<int> dayCount;
         #endregion
 
+        #region Public Methods
+        [Header("SETTINGS")]
+        public float secondsPerDay = 20f;
+        
+        [Header("SKYBOX SETTINGS")]
         public AnimationCurve skySunSize;
         public AnimationCurve skySunSizeConvergence;
         public AnimationCurve skyAthmosphereThickness;
         public AnimationCurve skyExposure;
-
-
+        #endregion
 
         private void Update()
         {
