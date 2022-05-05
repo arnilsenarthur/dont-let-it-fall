@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c75f7cfedb5c543978d3ef4fc40cfe, type: 3}
   m_Name: DayNumber
   m_EditorClassIdentifier: 
-  value: 0
+  value: 10
   key: game.dayNumber

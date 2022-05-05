@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44556367, g: 0.4952451, b: 0.57413816, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -553,6 +553,30 @@ MonoBehaviour:
   dayCount:
     _value: 0
     variable: {fileID: 0}
+  skySunSize:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  skySunSizeConvergence:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  skyAthmosphereThickness:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  skyExposure:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &155481934
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +945,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325216574}
-  m_Material: {fileID: 13400000, guid: e60915c5920493542bba6b8e234e33a1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1035,7 +1059,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348247893}
-  m_Material: {fileID: 13400000, guid: e60915c5920493542bba6b8e234e33a1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1720,7 +1744,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778683693}
-  m_Material: {fileID: 13400000, guid: e60915c5920493542bba6b8e234e33a1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2036,7 +2060,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030767295}
-  m_Material: {fileID: 13400000, guid: e60915c5920493542bba6b8e234e33a1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2367,7 +2391,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434373326}
-  m_Material: {fileID: 13400000, guid: e60915c5920493542bba6b8e234e33a1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2546,7 +2570,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544881464}
-  m_Material: {fileID: 13400000, guid: e60915c5920493542bba6b8e234e33a1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2837,7 +2861,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678699083}
-  m_Material: {fileID: 13400000, guid: e60915c5920493542bba6b8e234e33a1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2956,7 +2980,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849238180}
-  m_Material: {fileID: 13400000, guid: e60915c5920493542bba6b8e234e33a1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3094,7 +3118,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053180135}
-  m_Material: {fileID: 13400000, guid: e60915c5920493542bba6b8e234e33a1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3605,6 +3629,10 @@ PrefabInstance:
       propertyPath: m_HighAngularXLimit.limit
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7914488375100705189, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7914488375100705190, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
       propertyPath: walkSpeed
       value: 2.5
@@ -3695,6 +3723,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7914488375100705193, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914488375100705199, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914488375100705199, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

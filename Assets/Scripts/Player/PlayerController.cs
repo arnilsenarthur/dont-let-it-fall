@@ -62,6 +62,7 @@ namespace DontLetItFall.Player
             #endregion 
 
             #region Jump Input
+            
             if (this.input.jump && _player.isGrounded && _player.Assembled)
             {
                 _player.Jump();
@@ -82,13 +83,11 @@ namespace DontLetItFall.Player
                 Vector3 velocity = new Vector3(0,_rigidbody.velocity.y,0);
 
                 Vector3 toadd = Vector3.ProjectOnPlane(input,_player.groundNormal) * _player.walkSpeed;
-
                 toadd.y *= Time.fixedDeltaTime;
                 velocity += toadd;
-            
+
                 if(_player.isGrounded)
                 {
-                    Debug.Log("Grounded");
                     velocity.y = Mathf.Max(velocity.y,0);
                 }
                 else
@@ -114,6 +113,20 @@ namespace DontLetItFall.Player
                 Quaternion target = Quaternion.identity;
                 _rigidbody.MoveRotation(Quaternion.Slerp(transform.rotation, target, Time.fixedDeltaTime * _player.balanceForce));
                 #endregion
+            }
+            else
+            {
+                Vector3 velocity = _rigidbody.velocity;
+
+                if (!_player.isGrounded)
+                    velocity.y -= 9.81f * Time.fixedDeltaTime;
+                else
+                    velocity.y = 0;
+
+                velocity.x *= 1f - Time.fixedDeltaTime * 3;
+                velocity.z *= 1f - Time.fixedDeltaTime * 3;
+
+                _rigidbody.velocity = velocity;
             }
         }
 

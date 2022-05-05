@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -31,9 +31,9 @@ namespace DontLetItFall.Variables
         {
             set
             {
-                if(this.value != null && this.value.Equals(value))
+                if (this.value != null && this.value.Equals(value))
                     return;
-                    
+
                 this.value = value;
                 if (OnChange != null) OnChange.Invoke();
             }
@@ -66,6 +66,27 @@ namespace DontLetItFall.Variables
 
     public delegate void OnChangeEvent();
 
+    #region Editor
+    [CustomEditor(typeof(Variable), true)]
+    [CanEditMultipleObjects]
+    public class VariableDrawer : Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            EditorGUI.BeginChangeCheck();
+            base.OnInspectorGUI();
+            if (EditorGUI.EndChangeCheck())
+            {
+                Variable v = target as Variable;
+                if (v.OnChange != null)
+                    v.OnChange();
+            }
+        }
+    }
+
+    #endregion
+
+
     #region Ready Only Field
     public class ReadOnlyAttribute : PropertyAttribute
     {
@@ -87,7 +108,12 @@ namespace DontLetItFall.Variables
                                    GUIContent label)
         {
             GUI.enabled = false;
+            EditorGUI.BeginChangeCheck();
             EditorGUI.PropertyField(position, property, label, true);
+            if (EditorGUI.EndChangeCheck())
+            {
+                Debug.Log("aaa");
+            }
             GUI.enabled = true;
         }
     }

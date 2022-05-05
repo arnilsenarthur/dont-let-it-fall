@@ -15,16 +15,14 @@ MonoBehaviour:
   version: 5
 --- !u!21 &2100000
 Material:
-  serializedVersion: 8
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Skybox
   m_Shader: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords:
-  - _SUNDISK_NONE
-  m_InvalidKeywords: []
+  m_ShaderKeywords: _SUNDISK_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -93,7 +91,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _AtmosphereThickness: 0.05399224
+    - _AtmosphereThickness: 0.5968948
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -104,7 +102,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Exposure: 0.4279784
+    - _Exposure: 1.970551
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -119,7 +117,7 @@ Material:
     - _SrcBlend: 1
     - _SunDisk: 0
     - _SunSize: 1
-    - _SunSizeConvergence: 0.046720117
+    - _SunSizeConvergence: 0.0051568747
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
