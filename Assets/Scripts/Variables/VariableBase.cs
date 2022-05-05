@@ -27,15 +27,29 @@ namespace DontLetItFall.Variables
 
     public class VariableBase<T> : Variable
     {
-        public T Value { set { this.value = value; if (OnChange != null) OnChange.Invoke(); } get => value; }
+        public T Value
+        {
+            set
+            {
+                if(this.value != null && this.value.Equals(value))
+                    return;
+                    
+                this.value = value;
+                if (OnChange != null) OnChange.Invoke();
+            }
+            get => value;
+        }
 
         [SerializeField]
-        private T value;
+        protected T value;
 
         public string key;
 
         private void OnEnable()
         {
+            if (key == null)
+                return;
+
             variables[key] = this;
         }
 
