@@ -51,6 +51,7 @@ namespace DontLetItFall.Entity.Player
         public float balanceForce = 3f;
         public float rotationSpeed = 5f;
         public LayerMask groundLayerMask;
+        public float groundCheckDistance = 0.8f;
 
         [Header("LIMBS")]
         public Limb[] limbs;
@@ -62,12 +63,14 @@ namespace DontLetItFall.Entity.Player
 
         [Header("STATE")]
         public bool isGrounded = false;
+        public Vector3 groundNormal = Vector3.up;
         #endregion
 
         #region Private Fields
         private Quaternion[] _startLimbRotations;
         private bool _assembled = true;
         private Rigidbody _rigidbody;
+        private Vector3 _bodyHipsOffset;
         #endregion
 
         #region Unity Methods
@@ -79,6 +82,8 @@ namespace DontLetItFall.Entity.Player
                 _startLimbRotations[i] = limbs[i].joint.transform.localRotation;
 
             _rigidbody.centerOfMass = Vector3.down;
+
+            _bodyHipsOffset = bodyHips.transform.localPosition;
 
             SetAssembled(true);
         }
@@ -119,19 +124,23 @@ namespace DontLetItFall.Entity.Player
         private void FixedUpdate()
         {
             #region Update Grounded
-            isGrounded = UnityEngine.Physics.CheckCapsule(
-                transform.position + Vector3.down * 0.995f,
-                transform.position + Vector3.down * 1.005f,
-                0.25f,
-                groundLayerMask
-            );
+            
+            isGrounded = UnityEngine.Physics.CheckSphere(transform.position - new Vector3(0,groundCheckDistance,0),0.25f,groundLayerMask);
+
+            if (isGrounded)
+            {
+                if(UnityEngine.Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 1.1f, groundLayerMask))
+                {
+                    groundNormal = hit.normal;
+                }
+            }
             #endregion
 
             //Stand Assembled
             if (_assembled)
             {
                 bodyHips.transform.localRotation = Quaternion.Lerp(bodyHips.transform.localRotation, Quaternion.identity, Time.deltaTime * wakeUpSpeed);
-                bodyHips.transform.localPosition = Vector3.Lerp(bodyHips.transform.localPosition, Vector3.zero, Time.deltaTime * wakeUpSpeed);
+                bodyHips.transform.localPosition = Vector3.Lerp(bodyHips.transform.localPosition, _bodyHipsOffset, Time.deltaTime * wakeUpSpeed);
             }
         }
         #endregion

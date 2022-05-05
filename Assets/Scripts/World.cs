@@ -30,7 +30,6 @@ namespace DontLetItFall
             RenderSettings.skybox.SetFloat("_SunSizeConvergence", skySunSizeConvergence.Evaluate(dayTime.value));
             RenderSettings.skybox.SetFloat("_AtmosphereThickness", skyAthmosphereThickness.Evaluate(dayTime.value));
             RenderSettings.skybox.SetFloat("_Exposure", skyExposure.Evaluate(dayTime.value));
-
         }
 
     }

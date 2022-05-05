@@ -79,9 +79,23 @@ namespace DontLetItFall.Player
                 #endregion
 
                 #region Walk
-                float y = _rigidbody.velocity.y;
-                Vector3 velocity = input * _player.walkSpeed;
-                velocity.y = y;
+                Vector3 velocity = new Vector3(0,_rigidbody.velocity.y,0);
+
+                Vector3 toadd = Vector3.ProjectOnPlane(input,_player.groundNormal) * _player.walkSpeed;
+
+                toadd.y *= Time.fixedDeltaTime;
+                velocity += toadd;
+            
+                if(_player.isGrounded)
+                {
+                    Debug.Log("Grounded");
+                    velocity.y = Mathf.Max(velocity.y,0);
+                }
+                else
+                {
+                    velocity.y -= 9.81f * Time.fixedDeltaTime;
+                }
+
                 _rigidbody.velocity = velocity;
                 #endregion
 
