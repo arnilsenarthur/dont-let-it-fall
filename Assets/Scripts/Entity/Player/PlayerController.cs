@@ -93,7 +93,7 @@ namespace DontLetItFall.Player
                 //Rotate towards input
                 if (input.magnitude > 0f)
                 {
-                    float rotSpeed =  _player.grabbedObject == null ? _player.rotationSpeed : _player.rotationSpeedWhileCarrying;
+                    float rotSpeed =  _player.grabbedObject == null ? _player.rotationSpeed.value : _player.rotationSpeedWhileCarrying;
                     Transform transform = _player.limbsParent.transform;
                     Quaternion targetRotation = Quaternion.LookRotation(input);
                     transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.fixedDeltaTime * rotSpeed);

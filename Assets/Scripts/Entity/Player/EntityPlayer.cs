@@ -46,14 +46,14 @@ namespace DontLetItFall.Entity.Player
 
         #region Public Fields
         [Header("SETTINGS")]
-        public float walkSpeed = 3f;
+        public Value<float> walkSpeed = new Value<float>(4);
         public float wakeUpSpeed = 1f;
         public float balanceForce = 3f;
-        public float rotationSpeed = 5f;
+        public Value<float> rotationSpeed = new Value<float>(4);
         public float rotationSpeedWhileCarrying = 1f;
         public LayerMask groundLayerMask;
         public float groundCheckDistance = 0.8f;
-        public float jumpForce = 15f;
+        public Value<float> jumpForce = new Value<float>(8);
         public float gravityForce = 20f;
         public AnimationCurve walkSpeedWeightMultiplier;
 
@@ -99,7 +99,7 @@ namespace DontLetItFall.Entity.Player
 
         public float GetWalkSpeed()
         {
-            return walkSpeedWeightMultiplier.Evaluate(grabbedWeight.value) * walkSpeed;
+            return walkSpeedWeightMultiplier.Evaluate(grabbedWeight.value) * walkSpeed.value;
         }
 
         private void Update()
@@ -251,7 +251,7 @@ namespace DontLetItFall.Entity.Player
 
         public void Jump()
         {
-            _rigidbody.velocity += (_rigidbody.velocity.y * Vector3.down) + Vector3.up * jumpForce;
+            _rigidbody.velocity += (_rigidbody.velocity.y * Vector3.down) + Vector3.up * jumpForce.value;
         }
         #endregion
 
