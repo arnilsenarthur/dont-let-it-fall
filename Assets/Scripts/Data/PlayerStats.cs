@@ -6,19 +6,13 @@ namespace DontLetItFall.Data
     [CreateAssetMenu(fileName = "PlayerStats", menuName = "DLIF/PlayerStats", order = 0)]
     public class PlayerStats : ScriptableObject
     {
-        public float health;
-        public float maxHealth;
+        public Value<float> maxFoodLevel;
+        public Value<float> currentFoodLevel;
 
-        public float foodLevel;
-        public float maxFoodLevel;
+        public Value<float> maxWaterLevel;
+        public Value<float> currentWaterLevel;
 
-        public float waterLevel;
-        public float maxWaterLevel;
-
-        public float energyLevel;
-        public float maxEnergyLevel;
-
-        public AnimationCurve walkSpeedMultiplierDependingOnEnergy;
-        public AnimationCurve balanceMultiplierDependingOnEnergy;
+        public Value<float> maxEnergyLevel;
+        public Value<float> currentEnergyLevel;
     }
 }

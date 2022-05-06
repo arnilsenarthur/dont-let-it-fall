@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 133d0b9e9b3b14249af341685973ac1f, type: 3}
-  m_Name: Test
+  m_Script: {fileID: 11500000, guid: a69908d1a98ca51408fa7c6d46269dbb, type: 3}
+  m_Name: Hunger
   m_EditorClassIdentifier: 
-  value: {x: 25, y: 25, z: 0}
-  key: playerPos
+  value: 0
+  key: player.Hunger

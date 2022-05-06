@@ -38,6 +38,12 @@ namespace DontLetItFall.Variables
                 }
             }
         }
+
+        public Value(){}
+        public Value(T value)
+        {
+            _value = value;
+        }
     }
 
     #if UNITY_EDITOR

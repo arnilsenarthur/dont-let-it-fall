@@ -82,18 +82,9 @@ namespace DontLetItFall.Player
                 #region Walk
                 Vector3 velocity = new Vector3(0,_rigidbody.velocity.y,0);
 
-                Vector3 toadd = Vector3.ProjectOnPlane(input,_player.groundNormal) * _player.walkSpeed;
+                Vector3 toadd = Vector3.ProjectOnPlane(input,_player.isGrounded ? _player.groundNormal : Vector3.up) * _player.GetWalkSpeed();
                 toadd.y *= Time.fixedDeltaTime;
                 velocity += toadd;
-
-                if(_player.isGrounded)
-                {
-                    velocity.y = Mathf.Max(velocity.y,0);
-                }
-                else
-                {
-                    velocity.y -= 9.81f * Time.fixedDeltaTime;
-                }
 
                 _rigidbody.velocity = velocity;
                 #endregion
@@ -102,9 +93,10 @@ namespace DontLetItFall.Player
                 //Rotate towards input
                 if (input.magnitude > 0f)
                 {
+                    float rotSpeed =  _player.grabbedObject == null ? _player.rotationSpeed.value : _player.rotationSpeedWhileCarrying;
                     Transform transform = _player.limbsParent.transform;
                     Quaternion targetRotation = Quaternion.LookRotation(input);
-                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.fixedDeltaTime * _player.rotationSpeed);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.fixedDeltaTime * rotSpeed);
                     transform.localEulerAngles = new Vector3(0f, transform.localEulerAngles.y, 0f);
                 }
                 #endregion
@@ -113,20 +105,12 @@ namespace DontLetItFall.Player
                 Quaternion target = Quaternion.identity;
                 _rigidbody.MoveRotation(Quaternion.Slerp(transform.rotation, target, Time.fixedDeltaTime * _player.balanceForce));
                 #endregion
-            }
-            else
-            {
-                Vector3 velocity = _rigidbody.velocity;
 
-                if (!_player.isGrounded)
-                    velocity.y -= 9.81f * Time.fixedDeltaTime;
-                else
-                    velocity.y = 0;
-
-                velocity.x *= 1f - Time.fixedDeltaTime * 3;
-                velocity.z *= 1f - Time.fixedDeltaTime * 3;
-
-                _rigidbody.velocity = velocity;
+                if(_player.grabbedObject != null)
+                {
+                    //add velocity
+                    _player.grabbedObject.GetComponent<Rigidbody>().velocity = _rigidbody.velocity;
+                }
             }
         }
 
