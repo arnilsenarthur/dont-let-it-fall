@@ -30,7 +30,7 @@ namespace DontLetItFall.Entity.Player
     {
         public PlayerStats stats;
         public Rigidbody bodyHips;
-        
+
         #region Events
         public UnityEvent<PlayerInteraction> OnCanInteractWithObject;
         public UnityEvent<PlayerInteraction> OnStopCanInteractWithObject;
@@ -64,6 +64,8 @@ namespace DontLetItFall.Entity.Player
 
         [Header("GRAB")]
         public GrabLimb[] grabLimbs;
+        public bool[] grabLimbsGrabbing;
+        public float grabWeightMultiplier = 0.1f;
 
         [Header("STATE")]
         public bool isGrounded = false;
@@ -82,6 +84,7 @@ namespace DontLetItFall.Entity.Player
         #region Unity Methods
         private void Start()
         {
+            grabLimbsGrabbing = new bool[grabLimbs.Length];
             _rigidbody = GetComponent<Rigidbody>();
             _startLimbRotations = new Quaternion[limbs.Length];
             for (int i = 0; i < limbs.Length; i++)
@@ -178,6 +181,7 @@ namespace DontLetItFall.Entity.Player
         #region Actions
         public void GrabObject()
         {
+            int i = 0;
             foreach (GrabLimb limb in grabLimbs)
             {
                 if (limb.currentObject != null)
@@ -185,10 +189,17 @@ namespace DontLetItFall.Entity.Player
                     if (grabbedObject != null && grabbedObject != limb.currentObject)
                         return;
 
-                    grabbedObject = limb.currentObject;
-                    grabbedWeight.value = grabbedObject.GetComponent<Rigidbody>().mass;
 
-                    /*
+
+                    Rigidbody rigidbody = limb.currentObject.GetComponent<Rigidbody>();
+                    grabbedWeight.value = rigidbody.mass;
+
+                    if (grabbedObject == null)  //Lighter to carry
+                        rigidbody.mass *= grabWeightMultiplier;
+
+                    grabbedObject = limb.currentObject;
+
+
                     ConfigurableJoint joint = grabbedObject.AddComponent<ConfigurableJoint>();
                     joint.anchor = new Vector3(0, 0, 0);
                     joint.xMotion = ConfigurableJointMotion.Locked;
@@ -199,20 +210,24 @@ namespace DontLetItFall.Entity.Player
                     joint.angularZMotion = ConfigurableJointMotion.Locked;
                     joint.targetPosition = new Vector3(0, 0, 0);
                     joint.connectedBody = limb.hand;
-                    joint.projectionDistance = 0.01f;
-                    joint.linearLimit = new SoftJointLimit(){limit = 0.01f};
-                    */
+                    joint.projectionDistance = 0.5f;
+                    joint.linearLimit = new SoftJointLimit() { limit = 0.5f };
 
+                    /*
                     FixedJoint joint = grabbedObject.gameObject.AddComponent<FixedJoint>();
                     joint.connectedBody = limb.hand;
                     joint.breakForce = 500;
+                    */
 
                     PlayerInteraction interaction = new PlayerInteraction();
                     interaction.targetObject = grabbedObject.gameObject;
                     interaction.type = PlayerInteractionType.Grab;
 
                     OnStopCanInteractWithObject.Invoke(interaction);
+
+                    grabLimbsGrabbing[i] = true;
                 }
+                i++;
             }
         }
 
@@ -223,8 +238,14 @@ namespace DontLetItFall.Entity.Player
                 foreach (Joint joint in grabbedObject.GetComponents<Joint>())
                     Destroy(joint);
 
+                Rigidbody rigidbody = grabbedObject.GetComponent<Rigidbody>();
+                rigidbody.mass /= grabWeightMultiplier;
+
                 grabbedWeight.value = 0;
                 grabbedObject = null;
+
+                for (int i = 0; i < grabLimbs.Length; i++)
+                    grabLimbsGrabbing[i] = false;
             }
         }
 

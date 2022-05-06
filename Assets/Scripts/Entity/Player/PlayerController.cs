@@ -105,6 +105,12 @@ namespace DontLetItFall.Player
                 Quaternion target = Quaternion.identity;
                 _rigidbody.MoveRotation(Quaternion.Slerp(transform.rotation, target, Time.fixedDeltaTime * _player.balanceForce));
                 #endregion
+
+                if(_player.grabbedObject != null)
+                {
+                    //add velocity
+                    _player.grabbedObject.GetComponent<Rigidbody>().velocity = _rigidbody.velocity;
+                }
             }
         }
 
