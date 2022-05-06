@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.36228865, g: 0.35686368, b: 0.38126466, a: 1}
+  m_IndirectSpecularColor: {r: 0.13030776, g: 0.12269815, b: 0.11985303, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5095,6 +5095,10 @@ PrefabInstance:
       propertyPath: groundCheckDistance
       value: 0.85
       objectReference: {fileID: 0}
+    - target: {fileID: 7914488375100705190, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
+      propertyPath: grabbedWeight.variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 945fdcdad14badf45ae77e6e5889b8e1, type: 2}
     - target: {fileID: 7914488375100705190, guid: 0f71987121931ab48b59e54e3bae493a, type: 3}
       propertyPath: limbs.Array.data[0].target
       value: 
