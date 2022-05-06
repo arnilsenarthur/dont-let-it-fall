@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c4c3db3c-1353-45c9-a22e-43523afe08c7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Armchair.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Armchair.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/ChestMetal.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/ChestMetal.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Coin.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Coin.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/DoorBase.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/DoorBase.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/GlobeStructure.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/GlobeStructure.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Lamp.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Lamp.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Mast.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Mast.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/MenuModels.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/MenuModels.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/MenuModels2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/MenuModels2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Pillar.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Pillar.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/SofaLeftBorder.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/SofaLeftBorder.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/SofaMiddle.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/SofaMiddle.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/SofaRightBorder.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/SofaRightBorder.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/TableSteampunk.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/TableSteampunk.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/WallWood.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/WallWood.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/WallWoodDoor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/WallWoodDoor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/barco.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/barco.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Loading.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Loading.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_0.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_10.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_7.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_8.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_9.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/menuBackground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/menuBackground.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/menuMask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/menuMask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/3a6de3e4-ad20-4692-94b0-b129ebba60d4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/3a6de3e4-ad20-4692-94b0-b129ebba60d4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Bed.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Bed.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Box.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Box.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Debug.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Debug.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PlayerPuppet.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PlayerPuppet.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/White.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/White.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="28l0x0EnntMRpceAKa1yLAeH5db" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4c3db3c-1353-45c9-a22e-43523afe08c7" name="Changes" comment="" />
+      <created>1651776111795</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651776111795</updated>
+      <workItem from="1651776142820" duration="4093000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
