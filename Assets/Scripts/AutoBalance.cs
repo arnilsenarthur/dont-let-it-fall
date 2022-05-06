@@ -1,4 +1,5 @@
 using UnityEngine;
+using DontLetItFall.Variables;
 
 namespace DontLetItFall.Physics
 {
@@ -7,6 +8,8 @@ namespace DontLetItFall.Physics
         #region Public Fields
         [Header("SETTINGS")]
         public float balanceForce = 20f;
+        [Header("REFERENCES")]
+        public Value<float> angle;
         #endregion
 
         #region Private Fields
@@ -28,6 +31,7 @@ namespace DontLetItFall.Physics
         private void FixedUpdate()
         {
             ApplyBalance();
+            angle.value = Mathf.Abs(Vector3.Angle(Vector3.up, transform.up));
         }
 
         /// <summary>
