@@ -9,14 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2de9f9fc44af56a4e8a409822cfad5f6, type: 3}
-  m_Name: Stats
+  m_Script: {fileID: 11500000, guid: a69908d1a98ca51408fa7c6d46269dbb, type: 3}
+  m_Name: CurrentFoodValue
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
-  foodLevel: 100
-  maxFoodLevel: 100
-  waterLevel: 100
-  maxWaterLevel: 100
-  energyLevel: 100
-  maxEnergyLevel: 100
+  value: 100
+  key: current_food

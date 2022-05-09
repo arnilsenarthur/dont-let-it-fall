@@ -14,5 +14,8 @@ namespace DontLetItFall.Data
 
         public Value<float> maxEnergyLevel;
         public Value<float> currentEnergyLevel;
+        
+        public Value<float> maxLifeLevel;
+        public Value<float> currentLifeLevel;
     }
 }

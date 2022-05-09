@@ -37,12 +37,14 @@ namespace DontLetItFall.UI
             //Generate all bindings
             foreach (BindingGroup group in groups)
             {
+                /*
                 bindingTitlePrefab.SetActive(false);
                 GameObject title = Instantiate(bindingTitlePrefab, transform);
 
                 title.GetComponent<PrefabInfo>().objects[0].GetComponent<TextMeshProUGUI>().text = "[" + group.title + "]";
                 
                 title.SetActive(true);
+                */
 
                 foreach (string binding in group.bindings)
                 {

@@ -2,93 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c3db3c-1353-45c9-a22e-43523afe08c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Armchair.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Armchair.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/ChestMetal.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/ChestMetal.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Coin.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Coin.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/DoorBase.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/DoorBase.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/GlobeStructure.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/GlobeStructure.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Lamp.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Lamp.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Mast.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Mast.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/MenuModels.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/MenuModels.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/MenuModels2.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/MenuModels2.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Pillar.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Pillar.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/SofaLeftBorder.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/SofaLeftBorder.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/SofaMiddle.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/SofaMiddle.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/SofaRightBorder.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/SofaRightBorder.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/TableSteampunk.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/TableSteampunk.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/WallWood.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/WallWood.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/WallWoodDoor.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/WallWoodDoor.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/barco.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/barco.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Loading.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Loading.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_0.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_10.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_4.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_5.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_6.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_7.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_8.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_9.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/menuBackground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/menuBackground.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/menuMask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/menuMask.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/3a6de3e4-ad20-4692-94b0-b129ebba60d4.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/3a6de3e4-ad20-4692-94b0-b129ebba60d4.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Bed.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Bed.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Box.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Box.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Debug.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Debug.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/PlayerPuppet.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/PlayerPuppet.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/White.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/White.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dont-let-it-fall/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dont-let-it-fall/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Lunarie ExtCond SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Lunarie ExtCond SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/benegraphic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/benegraphic SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/BindingPanelItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/BindingPanelItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Stats.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Stats.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HUD_Ex.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HUD_Ex.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Loading.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Loading.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/PlayerStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/BindingPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BindingPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/HUDScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/HUDScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skybox.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/menuBackground.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/menuBackground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/ref.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/ref.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
@@ -98,6 +33,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -105,6 +43,12 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/GyroscopeUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SettingsScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ArrowList.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -117,6 +61,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="rider.run.widget.enabled.cache" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -153,6 +99,8 @@
       <updated>1651776111795</updated>
       <workItem from="1651776142820" duration="4093000" />
       <workItem from="1651851255606" duration="1073000" />
+      <workItem from="1651946877786" duration="12271000" />
+      <workItem from="1652041445160" duration="6693000" />
     </task>
     <servers />
   </component>
@@ -162,6 +110,18 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DontLetItFall.UI;
+using DontLetItFall.Variables;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,7 +13,10 @@ namespace DontLetItFall
     public class LoadingScene : MonoBehaviour
 {
     [SerializeField]
-    private static string sceneName = "SampleScene";
+    private VariableString sceneName;
+    
+    [SerializeField]
+    private bool isTestScene = false;
     
     [Header("Texts")]
     [SerializeField]
@@ -50,19 +54,18 @@ namespace DontLetItFall
 
     private IEnumerator LoadScene()
     {
-        AsyncOperation async = SceneManager.LoadSceneAsync(sceneName);
+        AsyncOperation async = SceneManager.LoadSceneAsync(sceneName.Value);
         async.allowSceneActivation = false;
 
         while(!async.isDone)
         {
             loadingTitle.text = loadingTexts.LoadingTitle[1+(int)(async.progress*10)];
+            Debug.Log(loadingTitle.text);
             loadingBar.fillAmount = async.progress;
             loadingIcon.Rotate(Vector3.forward * Time.deltaTime * -250);
-            
-            Debug.Log(async.progress);
-            
-                if(async.progress >= 0.9f) 
-                    //async.allowSceneActivation = true;
+
+            if(async.progress >= 0.9f && !isTestScene) 
+                    async.allowSceneActivation = true;
                     
             yield return null;
         }
