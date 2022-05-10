@@ -9,7 +9,7 @@ namespace DontLetItFall.Variables
 
         public override string ToString()
         {
-            int minutes = Mathf.FloorToInt((value * 60 * 24)/minutesPrecision) * minutesPrecision;
+            int minutes = Mathf.FloorToInt(((float)value * 60 * 24)/minutesPrecision) * minutesPrecision;
 
             int hours = minutes / 60;
             minutes = minutes % 60;

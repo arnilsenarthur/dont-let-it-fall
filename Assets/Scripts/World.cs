@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 using DontLetItFall.Variables;
 
@@ -27,7 +28,15 @@ namespace DontLetItFall
 
         [Header("EVENTS")]
         public UnityEvent<int> onDayChanged;
+
+        public GameObject player;
+        public GameObject deathScreen;
         #endregion
+
+        private void Start()
+        {
+            worldTime.value = 0;
+        }
 
         private void Update()
         {
@@ -37,9 +46,9 @@ namespace DontLetItFall
 
             dayTime.value = (worldTime.value % secondsPerDay) / secondsPerDay;
             dayCount.value = now + 1;
-            dayWeekName.value = weekyDays[now%7];
+            dayWeekName.value = weekyDays[now % 7];
 
-            if(last != now)
+            if (last != now)
                 onDayChanged.Invoke(now);
 
             RenderSettings.skybox.SetFloat("_SunSize", skySunSize.Evaluate(dayTime.value));
@@ -48,5 +57,21 @@ namespace DontLetItFall
             RenderSettings.skybox.SetFloat("_Exposure", skyExposure.Evaluate(dayTime.value));
             DynamicGI.UpdateEnvironment();
         }
+
+        #region Test Section
+        private void FixedUpdate()
+        {
+            if (player.transform.position.y < -15f)
+            {
+                deathScreen.SetActive(true);
+            }
+        }
+
+        public void PlayAgain()
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
+        }
+        #endregion
     }
 }

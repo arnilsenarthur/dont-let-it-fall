@@ -37,11 +37,11 @@ namespace DontLetItFall.Variables
                 this.value = value;
                 if (OnChange != null) OnChange.Invoke();
             }
-            get => value;
+            get => (T) value;
         }
 
         [SerializeField]
-        protected T value;
+        protected object value;
 
         public string key;
 
@@ -55,7 +55,7 @@ namespace DontLetItFall.Variables
 
         public override string ToString()
         {
-            return value.ToString();
+            return value == null ? "null" : value.ToString();
         }
 
         public override void SetValue(object value)
@@ -67,6 +67,7 @@ namespace DontLetItFall.Variables
     public delegate void OnChangeEvent();
 
     #region Editor
+    #if UNITY_EDITOR
     [CustomEditor(typeof(Variable), true)]
     [CanEditMultipleObjects]
     public class VariableDrawer : Editor
@@ -83,7 +84,7 @@ namespace DontLetItFall.Variables
             }
         }
     }
-
+    #endif
     #endregion
 
 

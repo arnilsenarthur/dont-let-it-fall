@@ -34,7 +34,8 @@ namespace DontLetItFall.Core
             _camera.fieldOfView = fovByDistance.Evaluate(relativePos.magnitude);
             #endregion
 
-            float targetY = cameraYOffsetByHeight.Evaluate(target.position.y - _startPosition.y) + _startPosition.y;
+            float targetY = target.position.y + 2f;
+            //float targetY = cameraYOffsetByHeight.Evaluate(target.position.y - _startPosition.y) + _startPosition.y;
             float targetX = cameraXOffsetByPosition.Evaluate(target.position.x - _startPosition.x) + _startPosition.x;
             //lerp to targetY
             transform.position = Vector3.Lerp(transform.position, new Vector3(targetX, targetY, transform.position.z), moveSpeed * Time.deltaTime);
