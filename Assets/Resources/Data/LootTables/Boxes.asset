@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boxes
   m_EditorClassIdentifier: 
   entries:
-  - prefab: {fileID: 0}
-    weight: 0
-  - prefab: {fileID: 0}
-    weight: 0
+  - prefab: {fileID: 7415229216681848436, guid: e9530febce8d25f4088ca3995432a305, type: 3}
+    weight: 1
+  - prefab: {fileID: 8496247820292490855, guid: a494e3702d3ba2f4da9a1d1042db742d, type: 3}
+    weight: 3

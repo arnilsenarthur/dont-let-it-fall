@@ -43,6 +43,11 @@ namespace DontLetItFall
             
             SceneManager.LoadScene("Loading");
         }
+        
+        public void OpenURL(string url)
+        {
+            Application.OpenURL(url);
+        }
 
         public void ExitGame()
         {
