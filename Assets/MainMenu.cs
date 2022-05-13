@@ -10,7 +10,7 @@ namespace DontLetItFall
     {
         [Header("Background")]
         [SerializeField]
-        private Canvas _canvas;
+        private RectTransform _canvas;
         [SerializeField]
         private RectTransform _background;
         [SerializeField]
@@ -19,9 +19,9 @@ namespace DontLetItFall
         [SerializeField]
         private Vector2 _safeBackgroundArea = new Vector2(150, 300);
         private float _backgroundX => _background.rect.width;
-        private float _canvasX => _canvas.pixelRect.width;
+        private float _canvasX => _canvas.sizeDelta.x;
         private float _safeAreaX => ((_backgroundX - _canvasX) / 2) - _safeBackgroundArea.x;
-        private Vector3 _containerPosition => _backgroundContainer.position;
+        private Vector3 _containerPosition => _backgroundContainer.localPosition;
         private Vector2 _backgroundAbs => new Vector2(Mathf.Abs(_background.localPosition.x), Mathf.Abs(_background.localPosition.y));
         
         private Vector2 _backgroundLimit;
@@ -34,6 +34,7 @@ namespace DontLetItFall
         [SerializeField] [Range(0f,20f)]
         private float _mouseSpeed = 1;
         
+        [SerializeField]
         private bool _backgroundMovingLeft = true;
         
         [Space(1f)]
@@ -59,12 +60,12 @@ namespace DontLetItFall
         void Start()
         {
             _background.GetComponent<Image>().sprite = _backgroundSprites[Random.Range(0, _backgroundSprites.Length)];
-            
+
             _backgroundLimit = new Vector2(
                 _containerPosition.x - _safeAreaX,
                 _containerPosition.x + _safeAreaX);
-            
-            _backgroundContainer.position = new Vector3(_backgroundLimit.x, _containerPosition.y, 0);
+
+            _backgroundContainer.localPosition = new Vector3(_backgroundLimit.x, _containerPosition.y, 0);
         }
 
         void Update()
@@ -113,13 +114,13 @@ namespace DontLetItFall
             {
                 _backgroundContainer.position += new Vector3(_backgroundSpeed * Time.deltaTime, 0, 0);
 
-                if (_backgroundContainer.position.x >= _backgroundLimit.y)
+                if (_backgroundContainer.localPosition.x >= _backgroundLimit.y)
                     _backgroundMovingLeft = false;
             }
             else
             {
                 _backgroundContainer.position -= new Vector3(_backgroundSpeed * Time.deltaTime, 0, 0);
-                if (_backgroundContainer.position.x <= _backgroundLimit.x)
+                if (_backgroundContainer.localPosition.x <= _backgroundLimit.x)
                     _backgroundMovingLeft = true;
             }
         }

@@ -23,10 +23,10 @@ namespace DontLetItFall
 
         private IEnumerator SpawnBox()
         {
-            yield return new WaitForSeconds(Random.Range(_timeBetweenSpawns.x, _timeBetweenSpawns.y));
             Vector3 spawnPoint = new Vector3(Random.Range(_spawnPoints[0].position.x, _spawnPoints[1].position.x), transform.position.y, Random.Range(_spawnPoints[0].position.z, _spawnPoints[1].position.z));
-            Instantiate(_lootTable.GetRandom(), spawnPoint, transform.rotation);
+            Instantiate(_lootTable.GetRandom(), spawnPoint, new Quaternion(0,0,0,0));
             
+            yield return new WaitForSeconds(Random.Range(_timeBetweenSpawns.x, _timeBetweenSpawns.y));
             StartCoroutine(SpawnBox());
         }
     }

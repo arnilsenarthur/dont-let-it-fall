@@ -4,8 +4,6 @@ namespace DontLetItFall.Core
 {
     public class SimpleCameraController : MonoBehaviour
     {
-
-
         public Transform target;
         public float lookSpeed = 1f;
         public float moveSpeed = 5f;

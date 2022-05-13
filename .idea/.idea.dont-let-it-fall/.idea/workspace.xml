@@ -2,49 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c3db3c-1353-45c9-a22e-43523afe08c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animations.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/LogoImage.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/LogoImage.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/logoFall.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/logoFall.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/logoIdle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/logoIdle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MainMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MainMenu.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/icon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/logo.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/logo/logo_Dont.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/logo/logo_Dont.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/logo/logo_Let.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI/logo/logo_Let.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dont-let-it-fall/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dont-let-it-fall/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Lunarie ExtCond SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Lunarie ExtCond SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Pause-UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Settings-UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Pause-UI.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Settings-UI.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/LogoImage.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/LogoImage.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BoxSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BoxSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Metal.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Metal.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/PUSHILIN_boulder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/PUSHILIN_boulder.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/PirateHat_BaseColor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/PirateHat_BaseColor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FishBox.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FishBox.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Main Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/OptionItem-Slider.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/OptionItem-Slider.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Settings-UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Settings-UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/LootTables/Boxes.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/LootTables/Boxes.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SimpleCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SimpleCameraController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skybox.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_10.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_5.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_6.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_7.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_8.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_8.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_9.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ConceptArts/ConceptArt_9.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/logo/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/logo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/logo/logo.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/menuBackground.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/menuBackground.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WindowManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/fish.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/fish.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,10 +51,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/GyroscopeUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SettingsScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ArrowList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -120,6 +105,9 @@
       <workItem from="1651851255606" duration="1073000" />
       <workItem from="1651946877786" duration="12271000" />
       <workItem from="1652041445160" duration="6693000" />
+      <workItem from="1652290697551" duration="1619000" />
+      <workItem from="1652292452083" duration="3325000" />
+      <workItem from="1652379118226" duration="2936000" />
     </task>
     <servers />
   </component>
@@ -139,7 +127,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

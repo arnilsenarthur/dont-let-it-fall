@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Grabbable
   - Kitchen
+  - Machine_Room
   layers:
   - Default
   - TransparentFX
