@@ -9,7 +9,9 @@ namespace DontLetItFall.Physics
         [Header("SETTINGS")]
         public float balanceForce = 20f;
         [Header("REFERENCES")]
-        public Value<float> angle;
+        public Value<float> angleX;
+        public Value<float> angleY;
+        public Value<float> angleZ; 
         #endregion
 
         #region Private Fields
@@ -31,7 +33,9 @@ namespace DontLetItFall.Physics
         private void FixedUpdate()
         {
             ApplyBalance();
-            angle.value = Mathf.Abs(Vector3.Angle(Vector3.up, transform.up));
+            angleX.value = transform.eulerAngles.x;
+            angleY.value = transform.eulerAngles.y;
+            angleZ.value = transform.eulerAngles.z;
         }
 
         /// <summary>
