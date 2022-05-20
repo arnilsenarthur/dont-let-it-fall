@@ -7,6 +7,7 @@ using System;
 
 namespace DontLetItFall.Variables
 {
+    [System.Serializable]
     public abstract class Variable : ScriptableObject
     {
         protected static Dictionary<string, Variable> variables = new Dictionary<string, Variable>();
@@ -25,6 +26,7 @@ namespace DontLetItFall.Variables
     }
 
 
+    [System.Serializable]
     public class VariableBase<T> : Variable
     {
         public T Value
@@ -42,6 +44,9 @@ namespace DontLetItFall.Variables
 
         [SerializeField]
         protected object value;
+
+        [SerializeField]
+        private object test;
 
         public string key;
 

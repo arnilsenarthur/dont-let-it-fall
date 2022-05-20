@@ -193,6 +193,8 @@ namespace DontLetItFall.Entity.Player
 
                     Rigidbody rigidbody = limb.currentObject.GetComponent<Rigidbody>();
                     grabbedWeight.value = rigidbody.mass;
+                    
+                    Debug.Log("Grabbed " + limb.currentObject.name);
 
                     if (grabbedObject == null)  //Lighter to carry
                         rigidbody.mass *= grabWeightMultiplier;
@@ -239,6 +241,7 @@ namespace DontLetItFall.Entity.Player
                     Destroy(joint);
 
                 Rigidbody rigidbody = grabbedObject.GetComponent<Rigidbody>();
+                Debug.Log("Releasing: " + rigidbody.mass);
                 rigidbody.mass /= grabWeightMultiplier;
 
                 grabbedWeight.value = 0;
