@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DontLetItFall.Variables;
 using TMPro;
 using UnityEngine;
 
@@ -7,7 +8,9 @@ namespace DontLetItFall
 {
     public class GyroscopeUI : MonoBehaviour
     {
-        [SerializeField] private Vector2 shipAngle;
+        [SerializeField] private Value<float> shipAngleX;
+        [SerializeField] private Value<float> shipAngleZ;
+        private Vector2 shipAngle => new Vector2(shipAngleX.value, shipAngleZ.value);
         [SerializeField] private RectTransform gyroscopeRings;
         [SerializeField] private TextMeshProUGUI gyroscopeAngle;
 

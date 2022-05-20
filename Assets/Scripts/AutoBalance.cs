@@ -33,9 +33,22 @@ namespace DontLetItFall.Physics
         private void FixedUpdate()
         {
             ApplyBalance();
-            angleX.value = transform.eulerAngles.x;
-            angleY.value = transform.eulerAngles.y;
-            angleZ.value = transform.eulerAngles.z;
+            angleX.value = NegativeAngles(transform.eulerAngles.x);
+            angleY.value = NegativeAngles(transform.eulerAngles.y);
+            angleZ.value = NegativeAngles(transform.eulerAngles.z);
+        }
+
+        private float NegativeAngles(float angle)
+        {
+            if (angle >= 180)
+            {
+                angle -= 360;
+                
+                if (angle > 0)
+                    angle = -angle;
+            }
+
+            return angle;
         }
 
         /// <summary>

@@ -13,26 +13,26 @@ MonoBehaviour:
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
   maxFoodLevel:
-    _value: 0
-    variable: {fileID: 11400000, guid: 5e7a7384597360944a2db53ee4d35587, type: 2}
+    _value: 100
+    variable: {fileID: 0}
   currentFoodLevel:
     _value: 0
     variable: {fileID: 11400000, guid: 6c76621147cd75e4c9d372cd59b8fbc0, type: 2}
   maxWaterLevel:
-    _value: 0
-    variable: {fileID: 11400000, guid: a173816d69c88cb4eb59604211ab68d6, type: 2}
+    _value: 100
+    variable: {fileID: 0}
   currentWaterLevel:
     _value: 0
     variable: {fileID: 11400000, guid: 74ab4b9b8a00e5546aa77885b3462fa2, type: 2}
   maxEnergyLevel:
-    _value: 0
-    variable: {fileID: 11400000, guid: 1eee266143745a944b6f368eab6da01b, type: 2}
+    _value: 100
+    variable: {fileID: 0}
   currentEnergyLevel:
     _value: 0
     variable: {fileID: 11400000, guid: 86d9f42f76dd8d842924aa6c6bba87fd, type: 2}
   maxLifeLevel:
-    _value: 0
-    variable: {fileID: 11400000, guid: 16f9d6f1bb0876b4a8c18a4b992c7e05, type: 2}
+    _value: 100
+    variable: {fileID: 0}
   currentLifeLevel:
     _value: 0
     variable: {fileID: 11400000, guid: fccb83f5e3d60fc4d90e38ff81e300be, type: 2}

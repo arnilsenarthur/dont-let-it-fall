@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entries:
   - prefab: {fileID: 1895387889538173414, guid: 095dd20212e77264b9042cab3aa273a6, type: 3}
-    weight: 1
+    weight: 17
   - prefab: {fileID: 1498706089028690878, guid: 092f2bccc15f32243bc10eee5923550a, type: 3}
-    weight: 1
+    weight: 16
   - prefab: {fileID: 3226242608618096885, guid: 325ee22587779ab4eabedd9645da5260, type: 3}
-    weight: 1
+    weight: 32
   - prefab: {fileID: 104264341227880109, guid: 45ac75a48bfe04f4cbdfc126b78ab43e, type: 3}
-    weight: 1
+    weight: 31
   - prefab: {fileID: 5582539730633468544, guid: 721f12d0c62bc2f488a4a7ec0c08626a, type: 3}
-    weight: 50
+    weight: 4

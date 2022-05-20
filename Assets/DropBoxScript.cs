@@ -45,10 +45,17 @@ namespace DontLetItFall
                     Debug.Log("Grounded");
                     isFalling = false;
                     rb.mass *= 4;
+                    StartCoroutine(DisableAnimator());
                 }
                 //Debug.Log(hit.distance);
             }
             Debug.DrawRay(transform.position, Vector3.down, Color.red);
+        }
+
+        private IEnumerator DisableAnimator()
+        {
+            yield return new WaitForSeconds(2);
+            animator.enabled = false;
         }
     }
 }

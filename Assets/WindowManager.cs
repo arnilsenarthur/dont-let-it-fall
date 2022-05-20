@@ -28,6 +28,8 @@ namespace DontLetItFall
 
         public void ChangeWindow(int value)
         {
+            if (_window.Length == 0) return;
+            
             OnValueChanged.Invoke();
             
             _window[_value].SetActive(false);
@@ -59,6 +61,8 @@ namespace DontLetItFall
 #if UNITY_EDITOR
         private void OnValidate()
         {
+            if (_window.Length == 0) return;
+            
             foreach(var window in _window)
             {
                 window.SetActive(false);
