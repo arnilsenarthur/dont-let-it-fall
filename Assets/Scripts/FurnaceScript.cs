@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DontLetItFall.Entity.Player;
 using UnityEngine;
 
 namespace DontLetItFall
@@ -10,6 +11,13 @@ namespace DontLetItFall
         [SerializeField] private HUDScript _hudScript;
         [SerializeField] [Range(0,2)] private float massConvertValue = .2f;
         [SerializeField] [Range(0, 1)] private float noFuelBurn = .5f;
+        
+        [SerializeField] private EntityPlayer _player;
+
+        private void Awake()
+        {
+            _player ??= FindObjectOfType<EntityPlayer>();
+        }
 
         private void OnTriggerEnter(Collider col)
         {
@@ -23,7 +31,9 @@ namespace DontLetItFall
             else
                 _hudScript.AddFuel(fuel*noFuelBurn);
 
-            col.transform.position = new Vector3(0, -100, 0);
+            _player.ReleaseObject();
+            
+            Destroy(col.gameObject);
         }
     }
 }

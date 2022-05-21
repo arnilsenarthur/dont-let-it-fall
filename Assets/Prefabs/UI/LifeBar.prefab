@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.96497154, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.14067984, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 1344552776008945623}
   - component: {fileID: 1344552776008945624}
   - component: {fileID: 374217300411225216}
+  - component: {fileID: 7573836830505121078}
   m_Layer: 5
   m_Name: LifeBar
   m_TagString: Untagged
@@ -104,7 +105,7 @@ RectTransform:
   m_GameObject: {fileID: 1344552776008945626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: -0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1344552776580064461}
@@ -166,8 +167,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544fe085f6c3e9e4c9b9e229b16eae01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  value: 0.125
   content: {fileID: 1344552775776088187}
+--- !u!225 &7573836830505121078
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344552776008945626}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1344552776580064462
 GameObject:
   m_ObjectHideFlags: 0

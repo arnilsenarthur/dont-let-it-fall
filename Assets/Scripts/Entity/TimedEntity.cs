@@ -17,7 +17,6 @@ namespace DontLetItFall.Entity
         private void OnEnable()
         {
             currentTime.value = 0;
-            lifeBar = GameUIController.Instance.ShowLifeBar(this.gameObject, Vector3.up);
         }
 
         private void Update()

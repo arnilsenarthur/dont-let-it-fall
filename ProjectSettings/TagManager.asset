@@ -7,11 +7,12 @@ TagManager:
   - Grabbable
   - Kitchen
   - Machine_Room
+  - Ship
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ship
   - Water
   - UI
   - Player

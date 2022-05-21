@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using DontLetItFall.Entity.Player;
@@ -33,7 +34,6 @@ namespace DontLetItFall.UI
         public GameObject objectLifebarPrefab;
 
         private GameObject _grabObject;
-        private List<LifeBarTracker> _lifeBarTrackers = new List<LifeBarTracker>();
 
         private void Start()
         {
@@ -62,7 +62,6 @@ namespace DontLetItFall.UI
             }
         }
 
-
         private void Update()
         {
             if (_grabObject != null)
@@ -71,28 +70,7 @@ namespace DontLetItFall.UI
                 Vector3 screenPos = Camera.main.WorldToScreenPoint(_grabObject.transform.position);
                 grabObjectPopup.transform.position = screenPos;
             }
-
-            foreach (var tracker in _lifeBarTrackers)
-                UpdateLifeBar(tracker);
-        }
-
-        public ObjectLifeBar ShowLifeBar(GameObject o, Vector3 offset)
-        {
-            LifeBarTracker tracker = new LifeBarTracker();
-            tracker.bar = Instantiate(objectLifebarPrefab, transform).GetComponent<ObjectLifeBar>();
-            tracker.target = o;
-            tracker.offset = offset;
-
-            _lifeBarTrackers.Add(tracker);
-            UpdateLifeBar(tracker);
-
-            return tracker.bar;
-        }
-
-        public void UpdateLifeBar(LifeBarTracker tracker)
-        {
-            Vector3 screenPos = Camera.main.WorldToScreenPoint(tracker.target.transform.position + tracker.offset);
-            tracker.bar.transform.position = screenPos;
+            
         }
     }
 }

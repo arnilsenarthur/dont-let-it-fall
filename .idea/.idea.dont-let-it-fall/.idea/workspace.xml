@@ -3,35 +3,46 @@
   <component name="ChangeListManager">
     <list default="true" id="c4c3db3c-1353-45c9-a22e-43523afe08c7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dont-let-it-fall/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dont-let-it-fall/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/DropBox.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/DropBox.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BoxSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BoxSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DropBoxScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DropBoxScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Lunarie ExtCond SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Lunarie ExtCond SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/benegraphic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/benegraphic SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GyroscopeUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GyroscopeUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/DropBoxFalling.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/DropBoxFalling.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/DropBoxGround.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/DropBoxGround.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArrowList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArrowList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BoxSpawner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BoxSpawner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CompassUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CompassUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DropBoxScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DropBoxScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FurnaceScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FurnaceScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GyroscopeUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GyroscopeUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Box/CoalBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Box/CoalBox.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Box/FishBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Box/FishBox.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Box/FoodBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Box/FoodBox.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Box/LifeBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Box/LifeBox.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Box/WaterBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Box/WaterBox.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Clock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Clock.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/HUD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/HUD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/AudioMixers.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/AudioMixers.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Game/BoatAngle.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Game/BoatAngle.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/LootTables/Boxes.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/LootTables/Boxes.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Player/PlayerStats.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Player/PlayerStats.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/LifeBar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/LifeBar.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AutoBalance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AutoBalance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatsUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StatsUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/HUDScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/HUDScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/TimedEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/TimedEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatsUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatsUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameUIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ObjectLifeBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ObjectLifeBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SettingsScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SettingsScript.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skybox.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WindowManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WindowManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SliderOptions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SliderOptions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VolumeChanger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VolumeChanger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WindowManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WindowManager.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -52,8 +63,11 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/QuestList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/QuestReward.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/QuestManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/QuestUI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -111,6 +125,7 @@
       <workItem from="1652379118226" duration="2936000" />
       <workItem from="1652999900679" duration="6909000" />
       <workItem from="1653065574567" duration="2658000" />
+      <workItem from="1653074424232" duration="9279000" />
     </task>
     <servers />
   </component>
