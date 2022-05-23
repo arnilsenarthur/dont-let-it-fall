@@ -14,5 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlocalizedName: ptBR
   localizedName: "Portugu\xEAs (Brasil)"
-  entries: "#Teste\nui.main_menu.test=Hello {0}, how are {1} doing? {2}\n\n\n\nui.interaction.grab=Grab\n\nui.value.coins=Coins:
-    {0}\n\ninput.player.movex=Mover\ninput.player.movey=Mover\ninput.player.jump=Pular\ninput.player.grab=Agarrar\n\nui.bindings.movement=Movimenta\xE7\xE3o\nui.bindings.interaction=Intera\xE7\xE3o"
+  entries: '#Teste
+
+    ui.main_menu.test=Hello {0}, how are {1} doing? {2}
+
+
+
+
+    ui.interaction.grab=Grab
+
+
+    ui.value.coins=Coins:
+    {0}
+
+
+    input.player.movex=Move
+
+    input.player.movey=Move
+
+    input.player.jump=Jump
+
+    input.player.grab=Grab
+
+    input.player.interact=Interact
+
+
+    ui.bindings.movement=Movement
+
+    ui.bindings.interaction=Interaction'
