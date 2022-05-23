@@ -13,17 +13,20 @@ MonoBehaviour:
   m_Name: QuestList
   m_EditorClassIdentifier: 
   selectedQuest: 2
+  selectedQuest: 5
   entries:
   - questName: Quest #1
     questID: 0
     questDescription: '- Equilibre o navio.'
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questDescription: Equilibre o navio.
     questTask:
     - taskName: Balance
       type: 0
       target: {fileID: 0}
       amount: 0
+    isCompleted: 1
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
@@ -34,11 +37,13 @@ MonoBehaviour:
     questDescription: '- Sobreviva por 60 segundos'
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questDescription: Sobreviva por 60 segundos
     questTask:
     - taskName: Survive_Seconds
       type: 3
       target: {fileID: 0}
       amount: 60
+    isCompleted: 1
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
@@ -49,11 +54,103 @@ MonoBehaviour:
     questDescription: '- Sobreviva 2 dias'
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questDescription: Sobreviva 3 dias
     questTask:
     - taskName: Survive_Days
       type: 2
       target: {fileID: 0}
       amount: 2
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #4
+    questID: 3
+    questDescription: Concerte o navio
+    questTask:
+      type: 1
+      target: {fileID: 0}
+      amount: 2
+    isCompleted: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #5
+    questID: 4
+    questDescription: Don't let it fall!
+    questTask:
+      type: 1
+      target: {fileID: 0}
+      amount: 2
+    isCompleted: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #6
+    questID: 5
+    questDescription: 'Sobreviva a tempestade
+
+
+      - Adicionar trigger de evento'
+    questTask:
+      type: 1
+      target: {fileID: 0}
+      amount: 2
+    isCompleted: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #7
+    questID: 6
+    questDescription: 'Sobreviva a nevasca
+
+
+      - Adicionar trigger de ice storm'
+    questTask:
+      type: 1
+      target: {fileID: 0}
+      amount: 2
+    isCompleted: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #8
+    questID: 7
+    questDescription: 'Sobreviva a ventania
+
+
+      - Adicionar trigger de gale'
+    questTask:
+      type: 1
+      target: {fileID: 0}
+      amount: 2
+    isCompleted: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #9
+    questID: 8
+    questDescription: 'Sobreviva a tempestade de areia
+
+
+      - Adicionar trigger
+      de gale'
+    questTask:
+      type: 1
+      target: {fileID: 0}
+      amount: 2
+    isCompleted: 0
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
