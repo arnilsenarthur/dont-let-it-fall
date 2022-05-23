@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4853879108688068206}
   - component: {fileID: 5760315292237054369}
   - component: {fileID: 2006171882961139189}
+  - component: {fileID: -2464628842916205272}
   m_Layer: 0
   m_Name: LifeBox
   m_TagString: Grabbable
@@ -190,6 +191,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parachute: {fileID: 6551473290091115256}
   distanceToEnd: 1
+--- !u!114 &-2464628842916205272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5582539730633468544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed5cb8ee49f761409875b1ef641f69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 0
 --- !u!1 &6650541270244249109
 GameObject:
   m_ObjectHideFlags: 0

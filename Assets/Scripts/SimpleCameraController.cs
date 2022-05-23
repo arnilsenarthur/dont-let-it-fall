@@ -34,7 +34,7 @@ namespace DontLetItFall.Core
             _camera.fieldOfView = fovByDistance.Evaluate(relativePos.magnitude);
             #endregion
 
-            float targetY = target.position.y + 2f;
+            float targetY = target.position.y + 4f;
 
             float angle = boat.transform.eulerAngles.x;
    

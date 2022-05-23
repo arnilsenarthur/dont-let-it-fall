@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3950398545826208271}
   - component: {fileID: 4559814058628307664}
   - component: {fileID: -8035648496711787124}
+  - component: {fileID: 6350292781630127037}
   m_Layer: 0
   m_Name: CoalBox
   m_TagString: Grabbable
@@ -190,6 +191,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parachute: {fileID: 4107300600867715796}
   distanceToEnd: 1
+--- !u!114 &6350292781630127037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104264341227880109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed5cb8ee49f761409875b1ef641f69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 0
 --- !u!1 &2623746270313260687
 GameObject:
   m_ObjectHideFlags: 0

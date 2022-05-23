@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -5174235498978347482}
   - component: {fileID: -1635156281252994532}
   - component: {fileID: -944308957736175911}
+  - component: {fileID: -9136184846104905012}
   m_Layer: 0
   m_Name: FoodBox
   m_TagString: Grabbable
@@ -190,6 +191,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parachute: {fileID: 130259245656128877}
   distanceToEnd: 1
+--- !u!114 &-9136184846104905012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498706089028690878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed5cb8ee49f761409875b1ef641f69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1
 --- !u!1 &6778795893233201900
 GameObject:
   m_ObjectHideFlags: 0
