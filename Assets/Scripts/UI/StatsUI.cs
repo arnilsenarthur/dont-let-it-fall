@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DontLetItFall.Variables;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,24 +10,24 @@ namespace DontLetItFall
 {
     public class StatsUI : MonoBehaviour
     {
-        [SerializeField] private float maxValue = 100;
+        [SerializeField] private Value<float> maxValue;
 
-        public float MaxValue
+        public Value<float> MaxValue
         {
             get { return maxValue; }
             set { maxValue = value; }
         }
 
         [SerializeField] 
-        private float currentValue = 100;
+        private Value<float> currentValue;
         
-        public float CurrentValue
+        public Value<float> CurrentValue
         {
             get { return currentValue; }
             set { currentValue = value; }
         }
 
-        private float fillValue => currentValue / maxValue;
+        private float fillValue => currentValue.value / maxValue.value;
         
         [SerializeField]
         private Image fillImage;

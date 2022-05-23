@@ -28,6 +28,11 @@ namespace DontLetItFall
 
         private void Update()
         {
+            if(transform.position.y < -20)
+            {
+                Destroy(gameObject);
+            }
+            
             if (transform.childCount == 0) return;
             
             if (!transform.GetChild(0).gameObject.activeSelf)

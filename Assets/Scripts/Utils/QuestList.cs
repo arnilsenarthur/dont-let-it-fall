@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 namespace DontLetItFall.Utils
@@ -14,7 +16,12 @@ namespace DontLetItFall.Utils
     [System.Serializable]
     public class QuestTaskEntry
     {
-        private string _taskName = "S";
+        public string taskName;
+        public TaskType type;
+        public GameObject target;
+        [Tooltip("For balance is 0")]
+        public float amount;
+        
         public enum TaskType
         {
             Balance,
@@ -24,21 +31,21 @@ namespace DontLetItFall.Utils
             Survive_ThisDay,
             Survive_ThisNight
         }
-        public TaskType type;
-        public GameObject target;
-        [Tooltip("For balance is 0")]
-        public float amount;
     }
 
     [System.Serializable]
     public class QuestListEntry
     {
+        [Header("About")]
         public string questName;
         public int questID;
-        [Multiline]
+        [TextArea]
         public string questDescription;
-        public QuestTaskEntry questTask;
         public bool isCompleted;
+
+        [Space] [Header("Stats")] 
+        public WeatherEvent weatherEvent;
+        public List<QuestTaskEntry> questTask;
         public List<QuestRewardsEntry> questRewards;
     }
     
@@ -98,7 +105,7 @@ namespace DontLetItFall.Utils
         
         public void SetQuestCompleted()
         {
-            entries[selectedQuest].isCompleted = true;
+            //entries[selectedQuest].isCompleted = true;
             NextQuest();
         }
 
@@ -109,5 +116,23 @@ namespace DontLetItFall.Utils
                 selectedQuest++;
             }
         }
+
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            foreach (var qList in entries)
+            {
+                if(qList.weatherEvent == null)
+                {
+                    qList.weatherEvent = Resources.Load<WeatherEvent>("Data/Weather/Clear");
+                }
+                
+                foreach (var tasks in qList.questTask)
+                {
+                    tasks.taskName = tasks.type.ToString();
+                }
+            }
+        }
+#endif
     }
 }

@@ -1,27 +1,13 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using DontLetItFall.Data;
 using DontLetItFall.Variables;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace DontLetItFall
 {
-    public class HUDScript : MonoBehaviour
+    public class PlayerManager : MonoBehaviour
     {
-        [Header("Clock")]
-        [SerializeField]
-        private VariableTime time;
-        [SerializeField]
-        private VariableString weekDay;
-        [SerializeField] 
-        private Image timeClock;
-        [SerializeField] 
-        private TextMeshProUGUI weekDayText;
-        private float timeValue => time.Value;
-        
         #region PlayerStats
         
         [Space(1f)]
@@ -92,7 +78,8 @@ namespace DontLetItFall
         #endregion
         
         #endregion
-        
+
+        #region ShipStats
         
         [Space(1f)]
         [Header("Ship Stats")]
@@ -104,21 +91,16 @@ namespace DontLetItFall
         private StatsUI[] shipStatsImage;
         [SerializeField] 
         private float fuelDecayRate = 1f;
-
-        [Space(1f)] 
-        [Header("Others")] 
+        
+        #endregion
+        
+        [Space]
+        [Header("Player UI")]
         [SerializeField]
-        private GameObject deathScreen;
-
+        private HUDScript hud;
+        
         private void Start()
         {
-            playerStatsImage[0].MaxValue = playerLifeMax;
-            playerStatsImage[1].MaxValue = playerEnergyMax;
-            playerStatsImage[2].MaxValue = playerFoodMax;
-            playerStatsImage[3].MaxValue = playerWaterMax;
-            
-            shipStatsImage[0].MaxValue = maxFuel.value;
-
             ResetPlayerStats();
         }
 
@@ -132,19 +114,18 @@ namespace DontLetItFall
             currentFuel.value = maxFuel.value;
         }
 
-        private void Update()
+        void Update()
         {
-            ClockUpdate();
-
             PlayerStatsUpdate();
 
             ShipStatsUpdate();
             
             if(playerLife <= 0)
-                deathScreen.SetActive(true);
-                
+            {
+                hud.DeathScreen();
+            }
         }
-
+        
         private void PlayerStatsUpdate()
         {
             if (playerLife > 0 && playerEnergy <= 0 && (playerFood <= 0 || playerWater <= 0))
@@ -182,44 +163,16 @@ namespace DontLetItFall
             {
                 energyRegeneration = false;
             }
-
-
-            playerStatsImage[0].CurrentValue = playerLife;
-            playerStatsImage[1].CurrentValue = playerEnergy;
-            playerStatsImage[2].CurrentValue = playerFood;
-            playerStatsImage[3].CurrentValue = playerWater;
         }
-
-        private void ClockUpdate()
-        {
-            if (timeValue >= .5f)
-            {
-                if (timeClock.fillClockwise)
-                    timeClock.fillClockwise = false;
-
-                timeClock.fillAmount = 1 - ((timeValue - .5f) / .5f);
-            }
-            else
-            {
-                if (!timeClock.fillClockwise)
-                    timeClock.fillClockwise = true;
-
-                timeClock.fillAmount = (timeValue) / .5f;
-            }
-            
-            weekDayText.text = weekDay.ToString();
-        }
-
+        
         private void ShipStatsUpdate()
         {
             if (currentFuel.value > 0)
             {
                 currentFuel.value -= fuelDecayRate * Time.deltaTime;
             }
-            
-            shipStatsImage[0].CurrentValue = currentFuel.value;
         }
-
+        
         public void AddFuel(float value)
         {
             currentFuel.value += value;

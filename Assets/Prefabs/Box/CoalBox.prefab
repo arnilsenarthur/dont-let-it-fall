@@ -155,6 +155,7 @@ MonoBehaviour:
     variable: {fileID: 0}
   triggerToHolder: Machine_Room
   isInTrigger: 0
+  expiredPlaceholder: {fileID: 3226242608618096885, guid: 858b4a4bf028d1442ba0f17f20c04ab1, type: 3}
 --- !u!95 &4559814058628307664
 Animator:
   serializedVersion: 4
