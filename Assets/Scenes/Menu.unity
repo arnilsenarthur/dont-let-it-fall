@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06244333, g: 0.058319025, b: 0.056690738, a: 1}
+  m_IndirectSpecularColor: {r: 0.31568658, g: 0.30540493, b: 0.31394485, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
-  m_LineType: 0
+  m_LineType: 2
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
   m_CharacterValidation: 0
@@ -674,14 +674,16 @@ MonoBehaviour:
       m_Calls: []
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
-  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 'Ahoy!
+  m_SelectionColor: {r: 1, g: 1, b: 1, a: 0}
+  m_Text: '
 
-    So, it has been brought to my attention that you''re our new
-    sailor? I see... We need to make some things really clear before you start your
-    shift, are you ready?
+    Ahoy!
 
-    
+    So, it has been brought to my attention that you''re
+    our new sailor? I see... We need to make some things really clear before you
+    start your shift, are you ready?
+
+
 
     First of all, Don''t let the goods fall!!!
     We don''t want to deal with a sailor''s carelessness if you know what i mean.
@@ -690,14 +692,14 @@ MonoBehaviour:
     boat. If the goods ( or the falling rocks that come from the sky - yeah, there''s
     this ) group up too much into one side of the boat, it will tilt, so be careful!
 
-    
+
 
     To
     assure that the food and water won''t perish quickly, their boxes need to be
     stored in the kitchen. You, sailor, can feed and hydrate yourself in the kitchen''s
     table in case there is still food and/or water int the storage.
 
-    
+
 
     Regarding
     the boat''s engine, it needs fuel, put coal boxes in the furnace and it will
@@ -708,15 +710,17 @@ MonoBehaviour:
     journey''s spoils!
 
 
-    Arrrrgggghh!'
+    Arrrrgggghh!
+
+'
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 1
-  m_RichText: 1
+  m_RichText: 0
   m_GlobalFontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_OnFocusSelectAll: 1
-  m_ResetOnDeActivation: 1
-  m_RestoreOriginalTextOnEscape: 1
+  m_OnFocusSelectAll: 0
+  m_ResetOnDeActivation: 0
+  m_RestoreOriginalTextOnEscape: 0
   m_isRichTextEditingAllowed: 0
   m_LineLimit: 0
   m_InputValidator: {fileID: 0}
@@ -762,9 +766,9 @@ RectTransform:
   m_Father: {fileID: 1953320629}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -676.6666}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &412913966
@@ -942,9 +946,9 @@ RectTransform:
   m_Father: {fileID: 1953320629}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -789.99994}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &485353116
@@ -1516,7 +1520,7 @@ MonoBehaviour:
   - {fileID: 465618906}
   - {fileID: 1343638810}
   - {fileID: 586559103}
-  _value: 0
+  _value: 3
   OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1657,9 +1661,9 @@ RectTransform:
   m_Father: {fileID: 1953320629}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -563.3333}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &971377308
@@ -1952,9 +1956,9 @@ RectTransform:
   m_Father: {fileID: 1953320629}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -903.33325}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1024012997
@@ -2056,7 +2060,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -98.42499}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065065764
@@ -2079,22 +2083,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ahoy!\r\nSo, it has been brought to my attention that you're our new sailor?
+  m_text: "\nAhoy!\nSo, it has been brought to my attention that you're our new sailor?
     I see... We need to make some things really clear before you start your shift,
-    are you ready?\r\n\r\nFirst of all, Don't let the goods fall!!! We don't want
-    to deal with a sailor's carelessness if you know what i mean. In case you haven't
+    are you ready?\n\n\nFirst of all, Don't let the goods fall!!! We don't want to
+    deal with a sailor's carelessness if you know what i mean. In case you haven't
     noticed, our boat flies! Because of that, our goods can be thrown from one side
     to another, falling or grouping up into one side of the boat. If the goods (
     or the falling rocks that come from the sky - yeah, there's this ) group up too
-    much into one side of the boat, it will tilt, so be careful!\r\n\r\nTo assure
-    that the food and water won't perish quickly, their boxes need to be stored in
-    the kitchen. You, sailor, can feed and hydrate yourself in the kitchen's table
-    in case there is still food and/or water int the storage.\r\n\r\nRegarding the
-    boat's engine, it needs fuel, put coal boxes in the furnace and it will be loaded.
-    In case you have a terrible organization and end up finishing our coal's stock,
+    much into one side of the boat, it will tilt, so be careful!\n\n\nTo assure that
+    the food and water won't perish quickly, their boxes need to be stored in the
+    kitchen. You, sailor, can feed and hydrate yourself in the kitchen's table in
+    case there is still food and/or water int the storage.\n\n\nRegarding the boat's
+    engine, it needs fuel, put coal boxes in the furnace and it will be loaded. In
+    case you have a terrible organization and end up finishing our coal's stock,
     you can burn any box in the furnace to feed it. The only issue here is: the fuel
     will last a lot less than it would with coal. Well, this seems like a YOU problem,
-    right?! Now, if you excuse me, I will take care of my last journey's spoils!\n\nArrrrgggghh!\u200B"
+    right?! Now, if you excuse me, I will take care of my last journey's spoils!\n\nArrrrgggghh!\n\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b4e2039ed025124c98ff55607dc01fc, type: 2}
   m_sharedMaterial: {fileID: -2005166917334896596, guid: 2b4e2039ed025124c98ff55607dc01fc, type: 2}
@@ -2137,7 +2141,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
+  m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -2145,7 +2149,7 @@ MonoBehaviour:
   m_enableKerning: 1
   m_enableExtraPadding: 1
   checkPaddingRequired: 0
-  m_isRichText: 1
+  m_isRichText: 0
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -2693,8 +2697,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: -0.5}
-  m_SizeDelta: {x: -70, y: -13}
+  m_AnchoredPosition: {x: -27.247261, y: -0.5}
+  m_SizeDelta: {x: -134.49452, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1409137394
 MonoBehaviour:
@@ -2744,8 +2748,8 @@ RectTransform:
   m_Father: {fileID: 1953320629}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0, y: 1}
@@ -2821,9 +2825,9 @@ RectTransform:
   m_Father: {fileID: 1953320629}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -1016.66656}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1621785088
@@ -2926,7 +2930,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_SizeDelta: {x: 14, y: 13.999997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717612275
 MonoBehaviour:
@@ -2948,8 +2952,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: c86c41947cc0e6a469bf58cd2fb0209f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3417,7 +3421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1967872711
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3651,8 +3655,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -30, y: 0}
-  m_SizeDelta: {x: 20, y: -40}
+  m_AnchoredPosition: {x: -55, y: 0}
+  m_SizeDelta: {x: 15, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2049481972
 MonoBehaviour:
@@ -3697,8 +3701,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1717612275}
   m_HandleRect: {fileID: 1717612274}
   m_Direction: 3
-  m_Value: 0.5
-  m_Size: 1
+  m_Value: 0
+  m_Size: 0.7439683
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3716,14 +3720,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.07817857, g: 0.16109525, b: 0.199, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5f86688d36910ab4c8125abf9c5b0b7f, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4624,11 +4628,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2268758945467896108, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -247.5
+      value: -487.5
       objectReference: {fileID: 0}
     - target: {fileID: 2268758945467896108, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 108.5
+      value: 285
       objectReference: {fileID: 0}
     - target: {fileID: 2448495723304261640, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5044,6 +5048,7 @@ GameObject:
   - component: {fileID: 2083997390392189109}
   - component: {fileID: 1415171796338093532}
   - component: {fileID: 7910764370870826877}
+  - component: {fileID: 8315366060610106904}
   m_Layer: 5
   m_Name: Container
   m_TagString: Untagged
@@ -5051,6 +5056,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8315366060610106904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8315366060610106903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!114 &8726388501696157412
 MonoBehaviour:
   m_ObjectHideFlags: 0
