@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DontLetItFall.Utils;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WeatherEventManager : MonoBehaviour
@@ -56,8 +57,11 @@ public class WeatherEventManager : MonoBehaviour
     private void ChangeWeatherParticle()
     {
         if (weatherParticle != null)
-            Destroy(weatherParticle);
-        
+        {
+            weatherEvent.GetComponent<ParticleSystem>().Stop();
+            Destroy(weatherParticle, 20);
+        }
+
         weatherParticle = Instantiate(weatherEvent.GetParticle(), transform);
     }
 

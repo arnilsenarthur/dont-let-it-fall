@@ -34,7 +34,8 @@ namespace DontLetItFall.Player
         #endregion
 
         #region Public Fields
-        
+
+        public HUDScript hud;
         #endregion
 
         #region Private Methods
@@ -68,6 +69,9 @@ namespace DontLetItFall.Player
                 _player.Jump();
             }
             #endregion
+            
+            if(transform.position.y < - 15)
+                hud.DeathScreen();
         }
 
         private void FixedUpdate()

@@ -33,19 +33,21 @@ namespace DontLetItFall
 
         private IEnumerator SpawnBox()
         {
-            Vector3 spawnPoint = new Vector3(Random.Range(_spawnPoints[0].position.x, _spawnPoints[1].position.x), transform.position.y, Random.Range(_spawnPoints[0].position.z, _spawnPoints[1].position.z));
-            if (_timeValue.Value >= .5f)
+            while (true)
             {
-                Instantiate(_lootTable.GetRandom(), spawnPoint, new Quaternion(0,0,0,0));
-                yield return new WaitForSeconds(Random.Range(_dayTimeBetweenSpawns.x, _dayTimeBetweenSpawns.y));
+                Vector3 spawnPoint = new Vector3(Random.Range(_spawnPoints[0].position.x, _spawnPoints[1].position.x),
+                    transform.position.y, Random.Range(_spawnPoints[0].position.z, _spawnPoints[1].position.z));
+                if (_timeValue.Value >= .5f)
+                {
+                    Instantiate(_lootTable.GetRandom(), spawnPoint, new Quaternion(0, 0, 0, 0));
+                    yield return new WaitForSeconds(Random.Range(_dayTimeBetweenSpawns.x, _dayTimeBetweenSpawns.y));
+                }
+                else
+                {
+                    Instantiate(_rocksList.GetRandom(), spawnPoint, new Quaternion(0, 0, 0, 0));
+                    yield return new WaitForSeconds(Random.Range(_nightTimeBetweenSpawns.x, _nightTimeBetweenSpawns.y));
+                }
             }
-            else
-            {
-                Instantiate(_rocksList.GetRandom(), spawnPoint, new Quaternion(0,0,0,0));
-                yield return new WaitForSeconds(Random.Range(_nightTimeBetweenSpawns.x, _nightTimeBetweenSpawns.y));
-            }
-            
-            StartCoroutine(SpawnBox());
         }
     }
 }
