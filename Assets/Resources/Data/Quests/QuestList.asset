@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f25e8e392eebf48a4b07903b227bca, type: 3}
   m_Name: QuestList
   m_EditorClassIdentifier: 
-  selectedQuest: 1
+  selectedQuest: 2
   entries:
   - questName: Quest #1
     questID: 0
@@ -29,32 +29,9 @@ MonoBehaviour:
       amount: 200
     - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
       amount: 1
-  - questName: Quest #2
-    questID: 1
-    questDescription: Sobreviva por 60 segundos
-    isCompleted: 1
-    weatherEvent: {fileID: 11400000, guid: 468112f94726eb746b983a02e9eed009, type: 2}
-    questTask:
-    - taskName: Survive_Seconds
-      type: 3
-      target: {fileID: 0}
-      amount: 60
-    - taskName: Balance
-      type: 0
-      target: {fileID: 0}
-      amount: 0
-    - taskName: Balance
-      type: 0
-      target: {fileID: 0}
-      amount: 0
-    questRewards:
-    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
-      amount: 200
-    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
-      amount: 1
   - questName: Quest #3
     questID: 2
-    questDescription: Sobreviva 3 dias
+    questDescription: '{d}'
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
     questTask:
@@ -70,6 +47,21 @@ MonoBehaviour:
       type: 0
       target: {fileID: 0}
       amount: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #2
+    questID: 1
+    questDescription: '{s}'
+    isCompleted: 1
+    weatherEvent: {fileID: 11400000, guid: 468112f94726eb746b983a02e9eed009, type: 2}
+    questTask:
+    - taskName: Survive_Seconds
+      type: 3
+      target: {fileID: 0}
+      amount: 60
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200

@@ -11,17 +11,25 @@ namespace DontLetItFall.UI
         [Header("Quest")]
         [SerializeField]
         private QuestList questList;
+        
+        [SerializeField]
+        private QuestManager questManager;
+        
         private int currentQuestIndex => questList.selectedQuest;
 
         private int currentQuestID => questList.entries[currentQuestIndex].questID;
         
         private QuestListEntry currentQuest => questList.entries[currentQuestIndex];
         
+        
         [Header("UI")]
         [SerializeField]
         private TextMeshProUGUI questText;
 
         private Animator _animator;
+        
+        private string _questText;
+        private int _questTimer;
         
         private void Awake()
         {
@@ -33,7 +41,15 @@ namespace DontLetItFall.UI
         public void UpdateQuest()
         {
             _animator.Play("NewQuest");
+            _questText = currentQuest.questDescription;
+            
             StartCoroutine(ChangeText());
+        }
+
+        public void UpdateQuestDays()
+        {
+            var replace = _questText.Replace("{d}", questManager.getDayToEnd.ToString());
+            questText.text = replace;
         }
 
         private IEnumerator ChangeText()
@@ -41,7 +57,29 @@ namespace DontLetItFall.UI
             yield return new WaitForSeconds(1f);
             
             questText.text = $"{currentQuest.questName}\n" +
-                             $"   {currentQuest.questDescription}";
+                             $"   {_questText}";
+            
+            if (_questText.Contains("{s}"))
+            {
+                _questTimer = (int)currentQuest.questTask[0].amount;
+                StartCoroutine(UpdateQuestTimer());
+            }else if (_questText.Contains("{d}"))
+            {
+                _questText = questText.text;
+                UpdateQuestDays();
+            }
+        }
+        
+        private IEnumerator UpdateQuestTimer()
+        {
+            _questText = questText.text;
+            while (_questTimer > 0)
+            {
+                _questTimer--;
+                var replace = _questText.Replace("{s}", _questTimer.ToString());
+                questText.text = replace;
+                yield return new WaitForSeconds(1f);
+            }
         }
     }
 }

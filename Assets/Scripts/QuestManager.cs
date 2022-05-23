@@ -19,6 +19,7 @@ namespace DontLetItFall
         [SerializeField] private Value<int> dayNumber;
         [SerializeField] private int taskDayEnd;
         [SerializeField] private WeatherEventManager weatherEventManager;
+        public int getDayToEnd => taskDayEnd - dayNumber.value;
         
         [Header("Quest")]
         [SerializeField]
