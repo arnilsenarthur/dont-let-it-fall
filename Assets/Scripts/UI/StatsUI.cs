@@ -33,7 +33,7 @@ namespace DontLetItFall
         private Image fillImage;
         
         [SerializeField]
-        private TextMeshProUGUI statsIcon;
+        private Image statsIcon;
 
         [SerializeField] [Range(0, 1)] 
         private float warningPercentage = .1f;
