@@ -1,6 +1,7 @@
 using UnityEngine;
 using DontLetItFall.InputSystem;
 using DontLetItFall.Entity.Player;
+using DontLetItFall.Inventory;
 
 namespace DontLetItFall.Player
 {
@@ -18,6 +19,9 @@ namespace DontLetItFall.Player
 
         [Binding("Grab", BindingMode.Default)]
         public bool grabbing;
+
+        [Binding("Interact", BindingMode.Default)]
+        public bool interacting;
     }
 
     public class PlayerController : MonoBehaviour
@@ -47,6 +51,17 @@ namespace DontLetItFall.Player
         private void Update()
         {
             this.input.Update();
+
+            #region Interact Input
+            if(_player.interactableObject != null && input.interacting)
+            {
+                IInteractable interactable = _player.interactableObject.GetComponent<IInteractable>();
+                if (interactable != null)
+                {  
+                    interactable.Interact(_player);   
+                }
+            }
+            #endregion
 
             #region Grab Input
             bool grabbing = input.grabbing && _player.Assembled;

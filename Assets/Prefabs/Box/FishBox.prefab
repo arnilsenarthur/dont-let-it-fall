@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: -1708140444776041428}
   - component: {fileID: 1249942722649526545}
   - component: {fileID: 3046690502796971187}
+  - component: {fileID: 6249300299269666738}
   m_Layer: 0
   m_Name: FishBox
   m_TagString: Grabbable
@@ -291,6 +292,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parachute: {fileID: 9220698841734707338}
   distanceToEnd: 1
+--- !u!114 &6249300299269666738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895387889538173414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed5cb8ee49f761409875b1ef641f69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1
 --- !u!1001 &4322315434410530995
 PrefabInstance:
   m_ObjectHideFlags: 0
