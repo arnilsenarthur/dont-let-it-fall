@@ -30,6 +30,7 @@ namespace DontLetItFall.Entity.Player
     {
         public PlayerStats stats;
         public Rigidbody bodyHips;
+        public Vector3 defaultBodyHipsRotation = new Vector3(0f, 0f, 0f);
 
         #region Events
         public UnityEvent<PlayerInteraction> OnCanInteractWithObject;
@@ -139,6 +140,7 @@ namespace DontLetItFall.Entity.Player
         private void FixedUpdate()
         {
             #region Update Grounded
+            Debug.DrawLine(transform.position - new Vector3(0, groundCheckDistance, 0), transform.position - new Vector3(0, groundCheckDistance + 0.25f, 0), Color.red);
             isGrounded = UnityEngine.Physics.CheckSphere(transform.position - new Vector3(0, groundCheckDistance, 0), 0.25f, groundLayerMask);
             #endregion
 
@@ -164,7 +166,7 @@ namespace DontLetItFall.Entity.Player
             if (_assembled)
             {
                 //Stand Up
-                bodyHips.transform.localRotation = Quaternion.Lerp(bodyHips.transform.localRotation, Quaternion.identity, Time.deltaTime * wakeUpSpeed);
+                bodyHips.transform.localRotation = Quaternion.Lerp(bodyHips.transform.localRotation, Quaternion.Euler(defaultBodyHipsRotation), Time.deltaTime * wakeUpSpeed);
                 bodyHips.transform.localPosition = Vector3.Lerp(bodyHips.transform.localPosition, _bodyHipsOffset, Time.deltaTime * wakeUpSpeed);
             }
             else
