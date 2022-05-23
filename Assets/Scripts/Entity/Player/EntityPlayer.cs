@@ -8,7 +8,8 @@ namespace DontLetItFall.Entity.Player
 {
     public enum PlayerInteractionType
     {
-        Grab
+        Grab,
+        Interact
     }
 
     public struct PlayerInteraction
@@ -72,6 +73,7 @@ namespace DontLetItFall.Entity.Player
         public bool isGrounded = false;
         public Vector3 groundNormal = Vector3.up;
         public GameObject grabbedObject;
+        public GameObject interactableObject;
         public Value<float> grabbedWeight;
         #endregion
 

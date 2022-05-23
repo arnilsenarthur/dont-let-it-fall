@@ -45,3 +45,11 @@ MonoBehaviour:
       keyValue: 304
       intValue: 0
       mouseInputValue: 0
+  - unlocalizedName: input.player.interact
+    name: Interact
+    value:
+      type: 0
+      stringValue: Vertical
+      keyValue: 101
+      intValue: 0
+      mouseInputValue: 0

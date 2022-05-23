@@ -142,4 +142,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5315fa75eac1154fbba111028382cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drag: 100
+  drag: 10
