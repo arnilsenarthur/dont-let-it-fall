@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13597652, g: 0.12806934, b: 0.1251724, a: 1}
+  m_IndirectSpecularColor: {r: 0.5687028, g: 0.6319783, b: 0.72404927, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 30475128}
   - component: {fileID: 30475127}
   - component: {fileID: 30475126}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: 'Trigger_Machine_Room '
   m_TagString: Machine_Room
   m_Icon: {fileID: 0}
@@ -483,6 +483,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1460356341}
+    - target: {fileID: 7246475713183952923, guid: d6ddc31b85f05d343b1e6196cd1fc48e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7246475713183952923, guid: d6ddc31b85f05d343b1e6196cd1fc48e, type: 3}
       propertyPath: cameraYOffsetByHeight.m_Curve.Array.size
       value: 5
@@ -2827,7 +2831,7 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 265
-  groundCheckDistance: 0
+  groundCheckDistance: -0.2
   jumpForce:
     _value: 8
     variable: {fileID: 0}
@@ -2868,7 +2872,7 @@ MonoBehaviour:
   limbs:
   - joint: {fileID: 2119625216}
     target: {fileID: 8042154740054642888}
-    assembledPositionSpring: 120
+    assembledPositionSpring: 20
     disassembledPositionSpring: 5
   - joint: {fileID: 986387221}
     target: {fileID: 4785029752241479663}
@@ -7063,7 +7067,7 @@ Transform:
   m_GameObject: {fileID: 1393433384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.212, z: 0.036}
-  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_LocalScale: {x: 0.45, y: 0.4, z: 0.45}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 122751462}
@@ -8079,7 +8083,7 @@ GameObject:
   - component: {fileID: 1683980878}
   - component: {fileID: 1683980877}
   - component: {fileID: 1683980876}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: Trigger_Kitchen
   m_TagString: Kitchen
   m_Icon: {fileID: 0}
