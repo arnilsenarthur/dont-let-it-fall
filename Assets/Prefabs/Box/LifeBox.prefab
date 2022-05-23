@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e50424c85aca3449c5f8a13763beec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeBar: {fileID: 0}
+  lifeBar: {fileID: 8797375010189221915}
   maxTime:
     _value: 60
     variable: {fileID: 0}
@@ -155,6 +155,7 @@ MonoBehaviour:
     variable: {fileID: 0}
   triggerToHolder: Kitchen
   isInTrigger: 0
+  expiredPlaceholder: {fileID: 0}
 --- !u!95 &5760315292237054369
 Animator:
   serializedVersion: 4
@@ -528,3 +529,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1344552776008945625, guid: b5713f9994b15aa48afc6c12ad98a54f, type: 3}
   m_PrefabInstance: {fileID: 9162557297068291227}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8797375010189221915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 374217300411225216, guid: b5713f9994b15aa48afc6c12ad98a54f, type: 3}
+  m_PrefabInstance: {fileID: 9162557297068291227}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7894597875507428161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544fe085f6c3e9e4c9b9e229b16eae01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
