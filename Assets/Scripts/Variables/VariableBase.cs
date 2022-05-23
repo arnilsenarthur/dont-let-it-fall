@@ -43,7 +43,11 @@ namespace DontLetItFall.Variables
         }
 
         [SerializeField]
+        #if UNITY_EDITOR
+        protected T value;
+        #else
         protected object value;
+        #endif
 
         [SerializeField]
         private object test;

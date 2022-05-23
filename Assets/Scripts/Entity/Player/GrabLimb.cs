@@ -82,7 +82,7 @@ namespace DontLetItFall.Entity.Player
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag != null && other.tag == "Grabbable" && player.grabbedObject == null)
+            if (other.tag != null && other.tag == "Grabbable" && player.interactableObject == null && player.grabbedObject == null)
             {
                 currentObject = other.gameObject;
 
@@ -91,11 +91,36 @@ namespace DontLetItFall.Entity.Player
                 interaction.type = PlayerInteractionType.Grab;
                 player.OnCanInteractWithObject.Invoke(interaction);
             }
+
+            if (other.tag != null && other.tag == "Interactable" && player.interactableObject == null && player.grabbedObject == null)
+            {
+                currentObject = other.gameObject;
+                player.interactableObject = currentObject;
+
+                PlayerInteraction interaction = new PlayerInteraction();
+                interaction.targetObject = currentObject;
+                interaction.type = PlayerInteractionType.Interact;
+                player.OnCanInteractWithObject.Invoke(interaction);
+            }
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if(player.grabbedObject != null)
+            if (player.interactableObject != null)
+            {
+                if (currentObject != null && other.gameObject == currentObject)
+                {
+                    currentObject = null;
+                    player.interactableObject = null;
+
+                    PlayerInteraction interaction = new PlayerInteraction();
+                    interaction.targetObject = currentObject;
+                    interaction.type = PlayerInteractionType.Interact;
+                    player.OnStopCanInteractWithObject.Invoke(interaction);
+                }
+            }
+
+            if (player.grabbedObject != null)
                 return;
 
             if (currentObject != null && other.gameObject == currentObject)

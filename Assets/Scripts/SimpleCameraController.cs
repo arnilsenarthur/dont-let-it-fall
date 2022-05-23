@@ -8,11 +8,13 @@ namespace DontLetItFall.Core
         public float lookSpeed = 1f;
         public float moveSpeed = 5f;
         public AnimationCurve fovByDistance = new AnimationCurve(new Keyframe(0, 60), new Keyframe(1, 60));
-        public AnimationCurve cameraYOffsetByHeight = new AnimationCurve(new Keyframe(0, 0), new Keyframe(1, 0));
         public AnimationCurve cameraXOffsetByPosition = new AnimationCurve(new Keyframe(-10, -7), new Keyframe(10, 7));
+        public AnimationCurve heightOffsetByBoatAngle = new AnimationCurve(new Keyframe(-45, -5), new Keyframe(45, 5));
 
         private Camera _camera;
         private Vector3 _startPosition;
+
+        public GameObject boat;
 
         private void Start()
         {
@@ -33,6 +35,14 @@ namespace DontLetItFall.Core
             #endregion
 
             float targetY = target.position.y + 2f;
+
+            float angle = boat.transform.eulerAngles.x;
+   
+            if (angle > 180)
+                angle -= 360;
+
+            targetY += heightOffsetByBoatAngle.Evaluate(angle);
+
             //float targetY = cameraYOffsetByHeight.Evaluate(target.position.y - _startPosition.y) + _startPosition.y;
             float targetX = cameraXOffsetByPosition.Evaluate(target.position.x - _startPosition.x) + _startPosition.x;
             //lerp to targetY
