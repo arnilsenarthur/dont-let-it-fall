@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f25e8e392eebf48a4b07903b227bca, type: 3}
+  m_Name: QuestListBenzo
+  m_EditorClassIdentifier: 
+  selectedQuest: 1
+  entries:
+  - questName: Quest #1
+    questID: 0
+    questDescription: Equilibre o navio.
+    isCompleted: 1
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questTask:
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #2
+    questID: 1
+    questDescription: Sobreviva por 60 segundos
+    isCompleted: 1
+    weatherEvent: {fileID: 11400000, guid: 468112f94726eb746b983a02e9eed009, type: 2}
+    questTask:
+    - taskName: Survive_Seconds
+      type: 3
+      target: {fileID: 0}
+      amount: 60
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #3
+    questID: 2
+    questDescription: Sobreviva 3 dias
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questTask:
+    - taskName: Survive_Days
+      type: 2
+      target: {fileID: 0}
+      amount: 3
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #4
+    questID: 3
+    questDescription: Concerte o navio
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questTask:
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #5
+    questID: 4
+    questDescription: Don't let it fall!
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 2fc75e61d31064b4b9f33765715484ec, type: 2}
+    questTask:
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #6
+    questID: 5
+    questDescription: 'Sobreviva a tempestade
+
+
+      - Adicionar trigger de evento'
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questTask:
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #7
+    questID: 6
+    questDescription: 'Sobreviva a nevasca
+
+
+      - Adicionar trigger de ice storm'
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 468112f94726eb746b983a02e9eed009, type: 2}
+    questTask:
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #8
+    questID: 7
+    questDescription: 'Sobreviva a ventania
+
+
+      - Adicionar trigger de gale'
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questTask:
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #9
+    questID: 8
+    questDescription: 'Sobreviva a tempestade de areia
+
+
+      - Adicionar trigger
+      de gale'
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 2fc75e61d31064b4b9f33765715484ec, type: 2}
+    questTask:
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1

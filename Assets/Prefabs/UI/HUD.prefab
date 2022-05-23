@@ -1593,7 +1593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.29411766, g: 0.29411766, b: 0.29411766, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1669,7 +1669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1946,6 +1946,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1238882139122618658}
     m_Modifications:
+    - target: {fileID: 635635919787210243, guid: a421e0439dfe19f4a8a4c9714807cb9c, type: 3}
+      propertyPath: maxValue._value
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 635635919787210243, guid: a421e0439dfe19f4a8a4c9714807cb9c, type: 3}
+      propertyPath: currentValue.variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 73877d60ce3ceef40bc36a446cd1bdef, type: 2}
     - target: {fileID: 1799018590239584135, guid: a421e0439dfe19f4a8a4c9714807cb9c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2848,26 +2856,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1238882138808491574}
     m_Modifications:
-    - target: {fileID: 41141091149036561, guid: beb798d3c94f7964c85ae3a41ea9bb12, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 904482019, guid: 048c6a22d4c9a9a4094dc66238a4c8ba, type: 3}
-    - target: {fileID: 41141091149036561, guid: beb798d3c94f7964c85ae3a41ea9bb12, type: 3}
-      propertyPath: m_UseSpriteMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 41141091149036561, guid: beb798d3c94f7964c85ae3a41ea9bb12, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5459164627996362344, guid: beb798d3c94f7964c85ae3a41ea9bb12, type: 3}
       propertyPath: m_Name
       value: Clock
       objectReference: {fileID: 0}
-    - target: {fileID: 5459164627996362350, guid: beb798d3c94f7964c85ae3a41ea9bb12, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1854328363, guid: 048c6a22d4c9a9a4094dc66238a4c8ba, type: 3}
     - target: {fileID: 5459164627996362351, guid: beb798d3c94f7964c85ae3a41ea9bb12, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2952,10 +2944,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5459164628749252330, guid: beb798d3c94f7964c85ae3a41ea9bb12, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 2054209555, guid: 048c6a22d4c9a9a4094dc66238a4c8ba, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beb798d3c94f7964c85ae3a41ea9bb12, type: 3}
 --- !u!114 &1238882137810963364 stripped

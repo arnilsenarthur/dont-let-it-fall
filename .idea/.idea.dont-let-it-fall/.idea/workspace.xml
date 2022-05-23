@@ -3,19 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="c4c3db3c-1353-45c9-a22e-43523afe08c7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dont-let-it-fall/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dont-let-it-fall/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Metal.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Metal.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/PUSHILIN_boulder.mtl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/PUSHILIN_boulder.mtl.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/PirateHat.mtl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/PirateHat.mtl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fornalha.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fornalha.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NewPlayer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Clock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Clock.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/HUD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/HUD.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Status.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Status.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Quests/QuestList.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Quests/QuestList.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FurnaceScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FurnaceScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/StatsUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StatsUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skybox.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/HUD_IconMap_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/HUD_IconMap_02.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

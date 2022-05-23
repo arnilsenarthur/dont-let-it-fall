@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.32617077, g: 0.3171596, b: 0.33043817, a: 1}
+  m_IndirectSpecularColor: {r: 0.30228803, g: 0.29162923, b: 0.2989125, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5199,6 +5199,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2026238559}
     - target: {fileID: 4957080704475069561, guid: 95f67a92a7abe384fa2201ec3508600a, type: 3}
+      propertyPath: foodDecayRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957080704475069561, guid: 95f67a92a7abe384fa2201ec3508600a, type: 3}
+      propertyPath: waterDecayRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957080704475069561, guid: 95f67a92a7abe384fa2201ec3508600a, type: 3}
+      propertyPath: energyDecayRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957080704475069561, guid: 95f67a92a7abe384fa2201ec3508600a, type: 3}
       propertyPath: shipStatsImage.Array.data[0]
       value: 
       objectReference: {fileID: 1305029285}
@@ -5220,7 +5232,7 @@ PrefabInstance:
       objectReference: {fileID: 1778491344}
     - target: {fileID: 4957080704620849615, guid: 95f67a92a7abe384fa2201ec3508600a, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4957080704620849615, guid: 95f67a92a7abe384fa2201ec3508600a, type: 3}
       propertyPath: dayNumber.variable
@@ -7761,7 +7773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuelLevel:
     _value: 0
-    variable: {fileID: 0}
+    variable: {fileID: 11400000, guid: 73877d60ce3ceef40bc36a446cd1bdef, type: 2}
   balanceForce: 10
   angleX:
     _value: 0

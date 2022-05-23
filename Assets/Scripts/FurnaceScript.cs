@@ -13,9 +13,11 @@ namespace DontLetItFall
         [SerializeField] [Range(0, 1)] private float noFuelBurn = .5f;
         
         [SerializeField] private EntityPlayer _player;
+        private AudioSource _audioSource;
 
         private void Awake()
         {
+            _audioSource = GetComponent<AudioSource>();
             _player ??= FindObjectOfType<EntityPlayer>();
         }
 
@@ -32,7 +34,7 @@ namespace DontLetItFall
                 _pManager.AddFuel(fuel*noFuelBurn);
 
             _player.ReleaseObject();
-            
+            _audioSource.Play();
             Destroy(col.gameObject);
         }
     }

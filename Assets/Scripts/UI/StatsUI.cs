@@ -54,7 +54,7 @@ namespace DontLetItFall
                 if(fillValue >= 1)
                     statsIcon.color = Color.white;
                 else
-                    statsIcon.color = Color.gray;
+                    statsIcon.color = Color.white;
             }
         }
     }
