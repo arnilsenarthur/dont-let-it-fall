@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c3db3c-1353-45c9-a22e-43523afe08c7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Particle/SnowParticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Particle/SnowParticle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FurnaceScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FurnaceScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuestManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/QuestManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameUIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/StatsUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StatsUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dont-let-it-fall/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dont-let-it-fall/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Weather/Normal Rain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Weather/Normal Rain.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/QuestList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/QuestList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/HUDScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/HUDScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skybox.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WeatherEventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WeatherEventManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/WeatherEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/WeatherEvent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +35,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/QuestManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/QuestUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/WeatherEvent.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

@@ -12,16 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f25e8e392eebf48a4b07903b227bca, type: 3}
   m_Name: QuestList
   m_EditorClassIdentifier: 
-  selectedQuest: 5
+  selectedQuest: 3
   entries:
   - questName: Quest #1
     questID: 0
     questDescription: Equilibre o navio.
+    isCompleted: 1
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
     questTask:
+    - taskName: Balance
       type: 0
       target: {fileID: 0}
       amount: 0
-    isCompleted: 1
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
@@ -30,11 +32,21 @@ MonoBehaviour:
   - questName: Quest #2
     questID: 1
     questDescription: Sobreviva por 60 segundos
+    isCompleted: 1
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
     questTask:
+    - taskName: Survive_Seconds
       type: 3
       target: {fileID: 0}
       amount: 60
-    isCompleted: 1
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
@@ -43,11 +55,21 @@ MonoBehaviour:
   - questName: Quest #3
     questID: 2
     questDescription: Sobreviva 3 dias
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
     questTask:
+    - taskName: Survive_Days
       type: 2
       target: {fileID: 0}
-      amount: 2
-    isCompleted: 0
+      amount: 3
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
@@ -56,11 +78,13 @@ MonoBehaviour:
   - questName: Quest #4
     questID: 3
     questDescription: Concerte o navio
-    questTask:
-      type: 1
-      target: {fileID: 0}
-      amount: 2
     isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questTask:
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
@@ -69,11 +93,13 @@ MonoBehaviour:
   - questName: Quest #5
     questID: 4
     questDescription: Don't let it fall!
-    questTask:
-      type: 1
-      target: {fileID: 0}
-      amount: 2
     isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questTask:
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
@@ -85,11 +111,21 @@ MonoBehaviour:
 
 
       - Adicionar trigger de evento'
-    questTask:
-      type: 1
-      target: {fileID: 0}
-      amount: 2
     isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questTask:
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
@@ -101,11 +137,21 @@ MonoBehaviour:
 
 
       - Adicionar trigger de ice storm'
-    questTask:
-      type: 1
-      target: {fileID: 0}
-      amount: 2
     isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questTask:
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
@@ -117,11 +163,21 @@ MonoBehaviour:
 
 
       - Adicionar trigger de gale'
-    questTask:
-      type: 1
-      target: {fileID: 0}
-      amount: 2
     isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questTask:
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
@@ -134,11 +190,21 @@ MonoBehaviour:
 
       - Adicionar trigger
       de gale'
-    questTask:
-      type: 1
-      target: {fileID: 0}
-      amount: 2
     isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questTask:
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
+    - taskName: Balance
+      type: 0
+      target: {fileID: 0}
+      amount: 0
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
