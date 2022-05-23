@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3902904, g: 0.38817883, b: 0.4216978, a: 1}
+  m_IndirectSpecularColor: {r: 0.06905436, g: 0.064586334, b: 0.06280788, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 30475128}
   - component: {fileID: 30475127}
   - component: {fileID: 30475126}
+  - component: {fileID: 30475129}
   m_Layer: 9
   m_Name: 'Trigger_Machine_Room '
   m_TagString: Machine_Room
@@ -392,6 +393,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30475124}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &30475129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30475124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debf3e88c2679304899ca4e32b12b675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceptedIds: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  currentItemCount:
+    _value: 0
+    variable: {fileID: 0}
 --- !u!1001 &43477390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6142,6 +6159,7 @@ GameObject:
   - component: {fileID: 1683980878}
   - component: {fileID: 1683980877}
   - component: {fileID: 1683980876}
+  - component: {fileID: 1683980879}
   m_Layer: 9
   m_Name: Trigger_Kitchen
   m_TagString: Kitchen
@@ -6227,6 +6245,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683980874}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1683980879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683980874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debf3e88c2679304899ca4e32b12b675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceptedIds: 0000000000000000000000000000000000000000
+  currentItemCount:
+    _value: 0
+    variable: {fileID: 0}
 --- !u!1001 &1685039951
 PrefabInstance:
   m_ObjectHideFlags: 0
