@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f25e8e392eebf48a4b07903b227bca, type: 3}
   m_Name: QuestList
   m_EditorClassIdentifier: 
-  selectedQuest: 0
+  selectedQuest: 5
   entries:
   - questName: Quest #1
     questID: 0
-    questDescription: '- Equilibre o navio.'
+    questDescription: Equilibre o navio.
     questTask:
       type: 0
       target: {fileID: 0}
       amount: 0
-    isCompleted: 0
+    isCompleted: 1
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
@@ -29,12 +29,12 @@ MonoBehaviour:
       amount: 1
   - questName: Quest #2
     questID: 1
-    questDescription: '- Sobreviva por 60 segundos'
+    questDescription: Sobreviva por 60 segundos
     questTask:
       type: 3
       target: {fileID: 0}
       amount: 60
-    isCompleted: 0
+    isCompleted: 1
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
@@ -42,9 +42,100 @@ MonoBehaviour:
       amount: 1
   - questName: Quest #3
     questID: 2
-    questDescription: '- Sobreviva 2 dias'
+    questDescription: Sobreviva 3 dias
     questTask:
       type: 2
+      target: {fileID: 0}
+      amount: 2
+    isCompleted: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #4
+    questID: 3
+    questDescription: Concerte o navio
+    questTask:
+      type: 1
+      target: {fileID: 0}
+      amount: 2
+    isCompleted: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #5
+    questID: 4
+    questDescription: Don't let it fall!
+    questTask:
+      type: 1
+      target: {fileID: 0}
+      amount: 2
+    isCompleted: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #6
+    questID: 5
+    questDescription: 'Sobreviva a tempestade
+
+
+      - Adicionar trigger de evento'
+    questTask:
+      type: 1
+      target: {fileID: 0}
+      amount: 2
+    isCompleted: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #7
+    questID: 6
+    questDescription: 'Sobreviva a nevasca
+
+
+      - Adicionar trigger de ice storm'
+    questTask:
+      type: 1
+      target: {fileID: 0}
+      amount: 2
+    isCompleted: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #8
+    questID: 7
+    questDescription: 'Sobreviva a ventania
+
+
+      - Adicionar trigger de gale'
+    questTask:
+      type: 1
+      target: {fileID: 0}
+      amount: 2
+    isCompleted: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Quest #9
+    questID: 8
+    questDescription: 'Sobreviva a tempestade de areia
+
+
+      - Adicionar trigger
+      de gale'
+    questTask:
+      type: 1
       target: {fileID: 0}
       amount: 2
     isCompleted: 0
