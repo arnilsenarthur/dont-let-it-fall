@@ -6,6 +6,8 @@ namespace DontLetItFall.Physics
     public class AutoBalance : MonoBehaviour
     {
         #region Public Fields
+        public Value<float> fuelLevel;
+
         [Header("SETTINGS")]
         public float balanceForce = 20f;
         [Header("REFERENCES")]
@@ -32,7 +34,9 @@ namespace DontLetItFall.Physics
         /// </summary>
         private void FixedUpdate()
         {
-            ApplyBalance();
+            if(fuelLevel.value > 0)
+                ApplyBalance();
+                
             angleX.value = NegativeAngles(transform.eulerAngles.x);
             angleY.value = NegativeAngles(transform.eulerAngles.y);
             angleZ.value = NegativeAngles(transform.eulerAngles.z);
