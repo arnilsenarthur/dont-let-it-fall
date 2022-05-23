@@ -21,175 +21,31 @@ namespace DontLetItFall
         [SerializeField] 
         private TextMeshProUGUI weekDayText;
         private float timeValue => time.Value;
-        
-        #region PlayerStats
-        
-        [Space(1f)]
-        [Header("Player Stats")]
 
-        [SerializeField]
-        private PlayerStats playerStats;
-        [SerializeField]
-        private StatsUI[] playerStatsImage;
-
-        [SerializeField] 
-        private float lifeDecayRate = 1f;
-
-        private float LifeDecay
-        {
-            get
-            {
-                int i = 4;
-                if (playerEnergy <= 0) i--;
-                if (playerFood <= 0) i--;
-                if (playerWater <= 0) i--;
-                return lifeDecayRate / i;
-            }    
-        }
+        [Space]
+        [Header("Gyroscope")]
+        [SerializeField] private Value<float> shipAngleX;
+        [SerializeField] private Value<float> shipAngleZ;
+        private Vector2 shipAngle => new Vector2(shipAngleX.value, shipAngleZ.value);
+        [SerializeField] private RectTransform gyroscopeRings;
+        [SerializeField] private TextMeshProUGUI gyroscopeAngle;
         
-        [SerializeField] 
-        private float energyDecayRate = 1f;
-        [SerializeField] 
-        private float foodDecayRate = 1f;
-        [SerializeField] 
-        private float waterDecayRate = 1f;
-        
-        [SerializeField]
-        private bool energyRegeneration = true;
-
-        #region StatsVariables
-        
-        #region CurrentStats
-        private float playerLife
-        {
-            get => playerStats.currentLifeLevel.value; 
-            set => playerStats.currentLifeLevel.value = value;
-        }
-        private float playerEnergy
-        {
-            get => playerStats.currentEnergyLevel.value; 
-            set => playerStats.currentEnergyLevel.value = value;
-        }
-        private float playerFood
-        {
-            get => playerStats.currentFoodLevel.value; 
-            set => playerStats.currentFoodLevel.value = value;
-        }
-        private float playerWater
-        {
-            get => playerStats.currentWaterLevel.value; 
-            set => playerStats.currentWaterLevel.value = value;
-        }
-        #endregion
-        
-        #region MaxStats
-        private float playerLifeMax => playerStats.maxLifeLevel.value;
-        private float playerEnergyMax => playerStats.maxEnergyLevel.value;
-        private float playerFoodMax => playerStats.maxFoodLevel.value;
-        private float playerWaterMax => playerStats.maxWaterLevel.value;
-        #endregion
-        
-        #endregion
-        
-        #endregion
-        
-        
-        [Space(1f)]
-        [Header("Ship Stats")]
-        [SerializeField]
-        private Value<float> currentFuel;        
-        [SerializeField]
-        private Value<float> maxFuel;
-        [SerializeField]
-        private StatsUI[] shipStatsImage;
-        [SerializeField] 
-        private float fuelDecayRate = 1f;
-
         [Space(1f)] 
         [Header("Others")] 
         [SerializeField]
         private GameObject deathScreen;
 
-        private void Start()
-        {
-            playerStatsImage[0].MaxValue = playerLifeMax;
-            playerStatsImage[1].MaxValue = playerEnergyMax;
-            playerStatsImage[2].MaxValue = playerFoodMax;
-            playerStatsImage[3].MaxValue = playerWaterMax;
-            
-            shipStatsImage[0].MaxValue = maxFuel.value;
-
-            ResetPlayerStats();
-        }
-
-        private void ResetPlayerStats()
-        {
-            playerStats.currentLifeLevel.value = playerLifeMax;
-            playerStats.currentEnergyLevel.value = playerEnergyMax;
-            playerStats.currentFoodLevel.value = playerFoodMax;
-            playerStats.currentWaterLevel.value = playerWaterMax;
-            
-            currentFuel.value = maxFuel.value;
-        }
-
         private void Update()
         {
             ClockUpdate();
-
-            PlayerStatsUpdate();
-
-            ShipStatsUpdate();
-            
-            if(playerLife <= 0)
-                deathScreen.SetActive(true);
-                
+            GyroscopeUpdate();
         }
 
-        private void PlayerStatsUpdate()
+        public void DeathScreen()
         {
-            if (playerLife > 0 && playerEnergy <= 0 && (playerFood <= 0 || playerWater <= 0))
-            {
-                playerLife -= LifeDecay * Time.deltaTime;
-            }
-
-            if (energyRegeneration)
-            {
-                if(playerEnergy < playerEnergyMax)
-                    playerEnergy += energyDecayRate * Time.deltaTime;
-            }
-            else if (playerEnergy > 0)
-            {
-                playerEnergy -= energyDecayRate * Time.deltaTime;
-            }
-
-            if (playerFood > 0)
-            {
-                if (energyRegeneration) 
-                    playerFood -= (foodDecayRate * 1.25f) * Time.deltaTime;
-                else
-                    playerFood -= foodDecayRate * Time.deltaTime;
-            }
-            
-            if (playerWater > 0)
-            {
-                if (energyRegeneration)
-                    playerWater -= (waterDecayRate * 1.25f) * Time.deltaTime;
-                else
-                    playerWater -= waterDecayRate * Time.deltaTime;
-            }
-
-            if (playerWater <= 0 && playerFood <= 0)
-            {
-                energyRegeneration = false;
-            }
-
-
-            playerStatsImage[0].CurrentValue = playerLife;
-            playerStatsImage[1].CurrentValue = playerEnergy;
-            playerStatsImage[2].CurrentValue = playerFood;
-            playerStatsImage[3].CurrentValue = playerWater;
+            deathScreen.SetActive(true);
         }
-
+        
         private void ClockUpdate()
         {
             if (timeValue >= .5f)
@@ -209,23 +65,11 @@ namespace DontLetItFall
             
             weekDayText.text = weekDay.ToString();
         }
-
-        private void ShipStatsUpdate()
+        
+        private void GyroscopeUpdate()
         {
-            if (currentFuel.value > 0)
-            {
-                currentFuel.value -= fuelDecayRate * Time.deltaTime;
-            }
-            
-            shipStatsImage[0].CurrentValue = currentFuel.value;
-        }
-
-        public void AddFuel(float value)
-        {
-            currentFuel.value += value;
-            
-            if (currentFuel.value > maxFuel.value)
-                currentFuel.value = maxFuel.value;
+            gyroscopeRings.eulerAngles = new Vector3(shipAngle.x, 0, shipAngle.y);
+            gyroscopeAngle.text = $"X: {shipAngle.x:0}° Z: {shipAngle.y:0}°";
         }
     }
 }

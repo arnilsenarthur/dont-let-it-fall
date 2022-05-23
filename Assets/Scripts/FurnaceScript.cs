@@ -8,7 +8,7 @@ namespace DontLetItFall
 {
     public class FurnaceScript : MonoBehaviour
     {
-        [SerializeField] private HUDScript _hudScript;
+        [SerializeField] private PlayerManager _pManager;
         [SerializeField] [Range(0,2)] private float massConvertValue = .2f;
         [SerializeField] [Range(0, 1)] private float noFuelBurn = .5f;
         
@@ -27,9 +27,9 @@ namespace DontLetItFall
             float fuel = colRb.mass * massConvertValue;
             
             if (col.name.Contains("CoalBox"))
-                _hudScript.AddFuel(fuel);
+                _pManager.AddFuel(fuel);
             else
-                _hudScript.AddFuel(fuel*noFuelBurn);
+                _pManager.AddFuel(fuel*noFuelBurn);
 
             _player.ReleaseObject();
             

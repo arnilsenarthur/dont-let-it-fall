@@ -18,16 +18,19 @@ namespace DontLetItFall
         [Header("World")] 
         [SerializeField] private Value<int> dayNumber;
         [SerializeField] private int taskDayEnd;
+        [SerializeField] private WeatherEventManager weatherEventManager;
         
         [Header("Quest")]
         [SerializeField]
         private QuestList questList;
         
         private int currentQuestIndex => questList.selectedQuest;
-
-        private int currentQuestID => questList.entries[currentQuestIndex].questID;
         
-        private QuestTaskEntry currentQuestTasks => questList.entries[currentQuestIndex].questTask;
+        private QuestListEntry currentQuest => questList.entries[currentQuestIndex];
+
+        private int currentQuestID => currentQuest.questID;
+        
+        private QuestTaskEntry currentQuestTasks => currentQuest.questTask[0];
         
         [SerializeField] private int taskDones;
 
@@ -45,6 +48,7 @@ namespace DontLetItFall
 
         private void Start()
         {
+            questList.selectedQuest = 0;
             StartCoroutine(TimeToCheck());
         }
 
@@ -86,6 +90,7 @@ namespace DontLetItFall
             taskDones++;
             questList.SetQuestCompleted();
             onQuestCompleted.Invoke();
+            weatherEventManager.ChangeWeatherEvent(currentQuest.weatherEvent);
         }
 
         private void BalanceQuestCheck()

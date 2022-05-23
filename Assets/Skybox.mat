@@ -93,11 +93,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-<<<<<<< Updated upstream
-    - _AtmosphereThickness: 0.012614628
-=======
-    - _AtmosphereThickness: 0.0040688887
->>>>>>> Stashed changes
+    - _AtmosphereThickness: 0.003143526
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -108,11 +104,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-<<<<<<< Updated upstream
-    - _Exposure: 0.18411656
-=======
-    - _Exposure: 0.09958891
->>>>>>> Stashed changes
+    - _Exposure: 0.08684789
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -127,11 +119,7 @@ Material:
     - _SrcBlend: 1
     - _SunDisk: 1
     - _SunSize: 1
-<<<<<<< Updated upstream
-    - _SunSizeConvergence: 0.011492666
-=======
-    - _SunSizeConvergence: 0.003768029
->>>>>>> Stashed changes
+    - _SunSizeConvergence: 0.0029181393
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1

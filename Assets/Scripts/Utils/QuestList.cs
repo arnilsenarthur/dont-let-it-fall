@@ -14,7 +14,6 @@ namespace DontLetItFall.Utils
     [System.Serializable]
     public class QuestTaskEntry
     {
-        private string _taskName = "S";
         public enum TaskType
         {
             Balance,
@@ -33,12 +32,17 @@ namespace DontLetItFall.Utils
     [System.Serializable]
     public class QuestListEntry
     {
+        [Header("About")]
         public string questName;
         public int questID;
-        [Multiline]
+        [TextArea]
         public string questDescription;
-        public QuestTaskEntry questTask;
         public bool isCompleted;
+        
+        [Space]
+        [Header("Task")]
+        public WeatherEvent weatherEvent;
+        public List<QuestTaskEntry> questTask;
         public List<QuestRewardsEntry> questRewards;
     }
     

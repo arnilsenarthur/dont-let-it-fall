@@ -29,13 +29,11 @@ namespace DontLetItFall.UI
         private static GameUIController _instance;
 
         public GameObject grabObjectPopup;
-        public GameObject interactObjectPopup;
 
         [Header("PREFABS")]
         public GameObject objectLifebarPrefab;
 
         private GameObject _grabObject;
-        private GameObject _interactObject;
 
         private void Start()
         {
@@ -50,11 +48,6 @@ namespace DontLetItFall.UI
                     _grabObject = interaction.targetObject;
                     grabObjectPopup.SetActive(true);
                     break;
-
-                case PlayerInteractionType.Interact:
-                    _interactObject = interaction.targetObject;
-                    interactObjectPopup.SetActive(true);
-                    break;
             }
         }
 
@@ -65,11 +58,6 @@ namespace DontLetItFall.UI
                 case PlayerInteractionType.Grab:
                     _grabObject = null;
                     grabObjectPopup.SetActive(false);
-                    break;
-
-                case PlayerInteractionType.Interact:
-                    _interactObject = null;
-                    interactObjectPopup.SetActive(false);
                     break;
             }
         }
@@ -82,13 +70,7 @@ namespace DontLetItFall.UI
                 Vector3 screenPos = Camera.main.WorldToScreenPoint(_grabObject.transform.position);
                 grabObjectPopup.transform.position = screenPos;
             }
-
-            if (_interactObject != null)
-            {
-                //Object position to screen position
-                Vector3 screenPos = Camera.main.WorldToScreenPoint(_interactObject.transform.position);
-                interactObjectPopup.transform.position = screenPos;
-            }
+            
         }
     }
 }
