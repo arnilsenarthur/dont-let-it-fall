@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using DontLetItFall.Variables;
 using UnityEngine;
+using DontLetItFall.Variables;
 
 namespace DontLetItFall.Inventory
 {
-    public class Inventory : MonoBehaviour
+    public class InventoryItem : MonoBehaviour
     {
-        public Value<int> itemsCount;
+        public int itemId;
     }
 }
