@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa37551a87bce344ebfd6028c1e406f4, type: 3}
   m_Name: DayTime
   m_EditorClassIdentifier: 
-  value: 0.48105162
+  value: 0.571828
   key: game.dayTime
   minutesPrecision: 1

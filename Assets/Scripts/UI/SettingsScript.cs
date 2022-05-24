@@ -23,6 +23,11 @@ namespace DontLetItFall
         [SerializeField]
         private RectTransform[] _settingsContents;
 
+        private void Start() 
+        {
+            ChangeValue(0);
+        }
+
         public void ChangeValue(int value)
         {
             _value = value;

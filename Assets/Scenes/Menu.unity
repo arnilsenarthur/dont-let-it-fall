@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10571361, g: 0.09935508, b: 0.09689429, a: 1}
+  m_IndirectSpecularColor: {r: 0.064159766, g: 0.059937984, b: 0.058277234, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2313,8 +2313,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2587,8 +2587,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2789,7 +2789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1343638811
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4400,7 +4400,7 @@ GameObject:
   - component: {fileID: 3799003265724372892}
   - component: {fileID: 5173292159795566134}
   m_Layer: 5
-  m_Name: CreditsName
+  m_Name: TutorialBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5051,24 +5051,32 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2268758945467896108, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -119.999985
-      objectReference: {fileID: 0}
-    - target: {fileID: 2268758945467896108, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -60
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448495723304261640, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2268758945467896108, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268758945467896108, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268758945467896108, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -26.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448495723304261640, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.33333334
+      objectReference: {fileID: 0}
     - target: {fileID: 2448495723304261640, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2448495723304261640, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 2740773153189433509, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -5132,11 +5140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3489384141745982840, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 3489384141745982840, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3649962483331594077, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

@@ -42,12 +42,15 @@ namespace DontLetItFall.Variables
             get => (T) value;
         }
 
+        /*
         [SerializeField]
         #if UNITY_EDITOR
         protected T value;
         #else
         protected object value;
         #endif
+        */
+        protected object value;
 
         [SerializeField]
         private object test;

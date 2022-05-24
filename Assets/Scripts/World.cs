@@ -35,7 +35,7 @@ namespace DontLetItFall
 
         private void Start()
         {
-            worldTime.value = 0;
+            worldTime.value = secondsPerDay/2f;
         }
 
         private void Update()
