@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.02713417, g: 0.02543064, b: 0.024768144, a: 1}
+  m_IndirectSpecularColor: {r: 0.0415672, g: 0.038566094, b: 0.0373844, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2853,7 +2853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1343638811
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4706,15 +4706,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8726388502926031768, guid: ba380bf25c5b73c45bc1b5e5b5c54ad5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8726388502926031768, guid: ba380bf25c5b73c45bc1b5e5b5c54ad5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8726388502926031768, guid: ba380bf25c5b73c45bc1b5e5b5c54ad5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 480.64795
       objectReference: {fileID: 0}
     - target: {fileID: 8726388502942302079, guid: ba380bf25c5b73c45bc1b5e5b5c54ad5, type: 3}
       propertyPath: m_Color.b
@@ -5092,11 +5092,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2268758945467896108, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -247.5
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 2268758945467896108, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 108.5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 2448495723304261640, guid: 03afab09274127c439b62f25b4d2ccfe, type: 3}
       propertyPath: m_AnchorMax.x
