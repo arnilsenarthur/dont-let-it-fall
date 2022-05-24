@@ -23,6 +23,9 @@ namespace DontLetItFall.Player
 
         public float walkAnimSpeed = 60f;
         public Vector3 walkAnimMax = new Vector3(0.5f, 0.5f, 0.5f);
+
+        public float walkAnimThreshold = 2f;
+        private bool _wasWalking = false;
         
         private void Start() 
         {
@@ -35,6 +38,18 @@ namespace DontLetItFall.Player
             walkAnim = controller.currentMoveInput.magnitude * walkAnim;
             LegL.localEulerAngles = walkAnimMax * walkAnim;
             LegR.localEulerAngles = walkAnimMax * -walkAnim;
+
+            float f = (walkAnimMax * walkAnim).x;
+            
+            bool walking = f > walkAnimThreshold;
+
+            if(!walking && _wasWalking)
+            {
+                //play sound
+                if(_player != null)
+                    _player.walkingAudio.Play();
+            }
+            _wasWalking = walking;
 
             bool grabbingLeft = _player.grabLimbsGrabbing[1];
             bool grabbingRight = _player.grabLimbsGrabbing[0];
