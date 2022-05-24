@@ -59,6 +59,10 @@ namespace DontLetItFall.Entity.Player
         public float gravityForce = 20f;
         public AnimationCurve walkSpeedWeightMultiplier;
 
+
+        [Header("AUDIO")]
+        public AudioSource walkingAudio;
+
         [Header("LIMBS")]
         public Limb[] limbs;
         public GameObject limbsParent;
