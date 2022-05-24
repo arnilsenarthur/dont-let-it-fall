@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedQuest: 1
   entries:
-  - questName: Quest #1
+  - questName: Balance the Ship
     questID: 0
-    questDescription: Equilibre o navio.
-    isCompleted: 1
+    questDescription: The ship is tipping over! Balance the cargo to survive!
+    difficulty: 1
+    isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
     questTask:
     - taskName: Balance
@@ -29,32 +30,26 @@ MonoBehaviour:
       amount: 200
     - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
       amount: 1
-  - questName: Quest #2
+  - questName: Survive the Rain!
     questID: 1
-    questDescription: Sobreviva por 60 segundos
-    isCompleted: 1
+    questDescription: '{s}'
+    difficulty: 2
+    isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 468112f94726eb746b983a02e9eed009, type: 2}
     questTask:
     - taskName: Survive_Seconds
       type: 3
       target: {fileID: 0}
       amount: 60
-    - taskName: Balance
-      type: 0
-      target: {fileID: 0}
-      amount: 0
-    - taskName: Balance
-      type: 0
-      target: {fileID: 0}
-      amount: 0
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
     - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
       amount: 1
-  - questName: Quest #3
+  - questName: Survive!
     questID: 2
-    questDescription: Sobreviva 3 dias
+    questDescription: '{d}'
+    difficulty: 3
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
     questTask:
@@ -62,14 +57,134 @@ MonoBehaviour:
       type: 2
       target: {fileID: 0}
       amount: 3
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Balance the Ship
+    questID: 3
+    questDescription: The ship is tipping over! Balance the cargo to survive!
+    difficulty: 3
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 468112f94726eb746b983a02e9eed009, type: 2}
+    questTask:
     - taskName: Balance
       type: 0
       target: {fileID: 0}
       amount: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Survive the Snow!
+    questID: 4
+    questDescription: '{s}'
+    difficulty: 4
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 2fc75e61d31064b4b9f33765715484ec, type: 2}
+    questTask:
+    - taskName: Survive_Seconds
+      type: 3
+      target: {fileID: 0}
+      amount: 90
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Survive!
+    questID: 5
+    questDescription: '{d}'
+    difficulty: 5
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questTask:
+    - taskName: Survive_Days
+      type: 2
+      target: {fileID: 0}
+      amount: 5
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Balance the Ship
+    questID: 6
+    questDescription: The ship is tipping over! Balance the cargo to survive!
+    difficulty: 5
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 468112f94726eb746b983a02e9eed009, type: 2}
+    questTask:
     - taskName: Balance
       type: 0
       target: {fileID: 0}
       amount: 0
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Survive the Storm!
+    questID: 7
+    questDescription: '{s}'
+    difficulty: 6
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 5000a4e3d6b1dc04ea0036ae8a7be464, type: 2}
+    questTask:
+    - taskName: Survive_Seconds
+      type: 3
+      target: {fileID: 0}
+      amount: 120
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Survive!
+    questID: 8
+    questDescription: '{d}'
+    difficulty: 7
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
+    questTask:
+    - taskName: Survive_Days
+      type: 2
+      target: {fileID: 0}
+      amount: 5
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Survive the Snowstorm!
+    questID: 9
+    questDescription: '{s}'
+    difficulty: 8
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: fee8f8414dde8b44bb360d58304d911c, type: 2}
+    questTask:
+    - taskName: Survive_Seconds
+      type: 3
+      target: {fileID: 0}
+      amount: 150
+    questRewards:
+    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+      amount: 200
+    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
+      amount: 1
+  - questName: Don't Let It Fall
+    questID: 10
+    questDescription: Y'know
+    difficulty: 10
+    isCompleted: 0
+    weatherEvent: {fileID: 11400000, guid: 295d547e0fb1119418eedc2c05fd61d0, type: 2}
+    questTask:
+    - taskName: Survive_ThisNight
+      type: 5
+      target: {fileID: 0}
+      amount: 3
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
