@@ -759,6 +759,7 @@ MonoBehaviour:
   _volumeSlider: {fileID: 1237931187077245915}
   _volumeText: {fileID: 7694684334997816708}
   _volume: 0.5
+  saveManager: {fileID: 11400000, guid: b11d38e6d982846418ba24bb1198442e, type: 2}
 --- !u!224 &2856515089670878164 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5004479704989526229, guid: ada5e9be0ede1cf4bbcb942f1f8ac3f1, type: 3}

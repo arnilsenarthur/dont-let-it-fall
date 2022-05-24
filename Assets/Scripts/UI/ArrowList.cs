@@ -15,6 +15,8 @@ namespace DontLetItFall
         [SerializeField] 
         private int _value;
         
+        public int GetValue => _value;
+        
         [SerializeField]
         private List<string> _options;
         

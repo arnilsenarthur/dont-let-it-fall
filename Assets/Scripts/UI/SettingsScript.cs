@@ -23,10 +23,6 @@ namespace DontLetItFall
         [SerializeField]
         private RectTransform[] _settingsContents;
 
-        private void Start()
-        {
-        }
-
         public void ChangeValue(int value)
         {
             _value = value;
@@ -51,6 +47,20 @@ namespace DontLetItFall
             
             _selectImage.position = _settingsButtons[_value].GetComponent<RectTransform>().position;
         }
+
+        public void FullScreenToggle(ArrowList aList)
+        {
+            //Enable fullscreen
+            if (aList.GetValue == 0)
+            {
+                Screen.fullScreen = false;
+            }
+            else
+            {
+                Screen.fullScreen = true;
+            }
+        }
+        
 #if UNITY_EDITOR
         private void OnValidate()
         {

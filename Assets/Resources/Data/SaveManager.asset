@@ -15,9 +15,7 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: a657a910ecc777445a47dff8671acb64, type: 2}
   _saveData:
     language: ptBR
-    masterVolume: 0.0001
-    musicVolume: 0.0001
-    sfxVolume: 0.0001
-  _variableReferences:
-  - field: 
-    variable: {fileID: 0}
+    masterVolume: 0.5
+    musicVolume: 0.5
+    sfxVolume: 0.5
+  _variableReferences: []
