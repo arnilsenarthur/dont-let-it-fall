@@ -93,7 +93,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
+<<<<<<< HEAD
     - _AtmosphereThickness: 0.39661106
+=======
+    - _AtmosphereThickness: 0.16751799
+>>>>>>> fixed-quests
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -104,7 +108,11 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
+<<<<<<< HEAD
     - _Exposure: 1.910778
+=======
+    - _Exposure: 0.89446235
+>>>>>>> fixed-quests
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -119,7 +127,11 @@ Material:
     - _SrcBlend: 1
     - _SunDisk: 1
     - _SunSize: 1
+<<<<<<< HEAD
     - _SunSizeConvergence: 0.07332983
+=======
+    - _SunSizeConvergence: 0.12651765
+>>>>>>> fixed-quests
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1

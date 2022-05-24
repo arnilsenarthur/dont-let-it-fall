@@ -41,6 +41,8 @@ namespace DontLetItFall.Utils
         public int questID;
         [TextArea]
         public string questDescription;
+        [Range(1,10)]
+        public int difficulty;
         public bool isCompleted;
 
         [Space] [Header("Stats")] 

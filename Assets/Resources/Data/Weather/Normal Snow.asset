@@ -18,5 +18,5 @@ MonoBehaviour:
   icon: {fileID: 0}
   windForce: 1
   shipSwing: 5
-  duration: {x: 60, y: 240}
+  duration: {x: 0, y: 0}
   dangerLevel: 2

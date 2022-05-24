@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: Clear
   weatherEventType: 6
-  particle: {fileID: 0}
+  particle: {fileID: 2481407304613651790, guid: e00d04830b4a5d94aaae5f88d7bc6f43, type: 3}
   icon: {fileID: 0}
-  windForce: 0
-  boatSwing: 0
+  windForce: 10
+  shipSwing: 0
   duration: {x: 0, y: 0}
   dangerLevel: 0

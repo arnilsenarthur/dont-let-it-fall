@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 182980a02372d5a4aadbd2d2635acfd3, type: 3}
-  m_Name: Normal Rain
+  m_Name: Rainstorm
   m_EditorClassIdentifier: 
   eventName: Normal Rain
   weatherEventType: 0
-  particle: {fileID: 1335678618256672059, guid: 7caae2fa55885d54080f26931df2351d, type: 3}
+  particle: {fileID: 1335678618256672059, guid: 820e79985812ba34590818f7016bef86, type: 3}
   icon: {fileID: 0}
   windForce: 5
   shipSwing: 15
