@@ -16,9 +16,9 @@ namespace DontLetItFall
         private VariableTime time;
         [SerializeField]
         private VariableString weekDay;
-        [SerializeField] 
+        [SerializeField]
         private Image timeClock;
-        [SerializeField] 
+        [SerializeField]
         private TextMeshProUGUI weekDayText;
         private float timeValue => time.Value;
 
@@ -29,9 +29,9 @@ namespace DontLetItFall
         private Vector2 shipAngle => new Vector2(shipAngleX.value, shipAngleZ.value);
         [SerializeField] private RectTransform gyroscopeRings;
         [SerializeField] private TextMeshProUGUI gyroscopeAngle;
-        
-        [Space(1f)] 
-        [Header("Others")] 
+
+        [Space(1f)]
+        [Header("Others")]
         [SerializeField]
         private GameObject deathScreen;
 
@@ -45,7 +45,7 @@ namespace DontLetItFall
         {
             deathScreen.SetActive(true);
         }
-        
+
         private void ClockUpdate()
         {
             if (timeValue >= .5f)
@@ -62,10 +62,10 @@ namespace DontLetItFall
 
                 timeClock.fillAmount = (timeValue) / .5f;
             }
-            
+
             weekDayText.text = weekDay.ToString();
         }
-        
+
         private void GyroscopeUpdate()
         {
             gyroscopeRings.eulerAngles = new Vector3(shipAngle.x, 0, shipAngle.y);

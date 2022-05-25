@@ -55,9 +55,12 @@ namespace DontLetItFall.Player
             #region Interact Input
             if(_player.interactableObject != null && input.interacting)
             {
+                Debug.Log("INTERACTING");
+
                 IInteractable interactable = _player.interactableObject.GetComponent<IInteractable>();
                 if (interactable != null)
                 {  
+                    Debug.Log("AAA");
                     interactable.Interact(_player);   
                 }
             }

@@ -10,6 +10,7 @@ namespace DontLetItFall.Physics
 
         [Header("SETTINGS")]
         public float balanceForce = 20f;
+        
         [Header("REFERENCES")]
         public Value<float> angleX;
         public Value<float> angleY;

@@ -32,6 +32,8 @@ namespace DontLetItFall.Inventory
             float food = inventory.GetAmount(1);
             float water = inventory.GetAmount(2);
 
+            Debug.Log(maxFoodLevel.value + "  " + foodLevel.value + "  " + food);
+
 
             if(neededFood > 0)
             {
