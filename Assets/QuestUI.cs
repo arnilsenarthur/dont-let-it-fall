@@ -48,6 +48,8 @@ namespace DontLetItFall.UI
 
         public void UpdateQuestDays()
         {
+            if (!_questText.Contains("{d}")) return;
+            
             var replace = _questText.Replace("{d}", questManager.getDayToEnd.ToString());
             questText.text = replace;
         }
@@ -63,10 +65,13 @@ namespace DontLetItFall.UI
             {
                 _questTimer = (int)currentQuest.questTask[0].amount;
                 StartCoroutine(UpdateQuestTimer());
-            }else if (_questText.Contains("{d}"))
+                Debug.Log("s");
+            }
+            else if (_questText.Contains("{d}"))
             {
                 _questText = questText.text;
                 UpdateQuestDays();
+                Debug.Log("d");
             }
         }
         

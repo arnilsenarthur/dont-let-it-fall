@@ -33,7 +33,6 @@ namespace DontLetItFall
 
         private IEnumerator SpawnBox()
         {
-            Debug.Log("SPAWN KKK");
             Vector3 spawnPoint = new Vector3(Random.Range(_spawnPoints[0].position.x, _spawnPoints[1].position.x), transform.position.y, Random.Range(_spawnPoints[0].position.z, _spawnPoints[1].position.z));
             if (_timeOfDay.value >= .5f)
             {
