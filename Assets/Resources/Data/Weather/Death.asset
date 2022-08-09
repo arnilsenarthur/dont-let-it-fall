@@ -15,7 +15,7 @@ MonoBehaviour:
   eventName: Death
   weatherEventType: 3
   particle: {fileID: 1076828888542132549, guid: d069dcc600aa4114f984621050de168b, type: 3}
-  icon: {fileID: 0}
+  icon: {fileID: 21302659, guid: 048c6a22d4c9a9a4094dc66238a4c8ba, type: 3}
   windForce: 100
   shipSwing: 25
   duration: {x: 0, y: 0}

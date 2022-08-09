@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 413eecae836338747a8cb3837b540c6c, type: 3}
-  m_Name: RewardCoin
+  m_Name: RewardWater
   m_EditorClassIdentifier: 
-  reward: 0
-  rewardIcon: {fileID: 0}
+  reward: 1
+  rewardIcon: {fileID: -615563441, guid: 048c6a22d4c9a9a4094dc66238a4c8ba, type: 3}
   rewardPrefab: {fileID: 0}
   rewardEvent:
     m_PersistentCalls:

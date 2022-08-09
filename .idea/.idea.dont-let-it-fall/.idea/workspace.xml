@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c4c3db3c-1353-45c9-a22e-43523afe08c7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dont-let-it-fall/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dont-let-it-fall/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Bed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Bed.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QuestUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QuestUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Settings-UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Settings-UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Quests/QuestList.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Quests/QuestList.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Quests/RewardCoin.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Quests/RewardCoin.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Quests/RewardMeat.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Quests/RewardMeat.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Weather/Clear.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Weather/Clear.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Weather/Death.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Weather/Death.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Weather/Normal Rain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Weather/Normal Rain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Weather/Normal Snow.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Weather/Normal Snow.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Weather/Rainstorm.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Weather/Rainstorm.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Weather/Snowstorm.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Weather/Snowstorm.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BoxSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BoxSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/QuestList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/QuestList.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skybox.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +54,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/QuestManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/DestructibleObjectData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/QuestUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/WeatherEvent.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -55,10 +70,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="rider.run.widget.enabled.cache" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Don't Let It Fall\Don't Let It Fall.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\sergi\Desktop\Don't Let It Fall" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -99,6 +127,13 @@
       <workItem from="1653065574567" duration="2658000" />
       <workItem from="1653074424232" duration="9279000" />
       <workItem from="1653396091097" duration="5310000" />
+      <workItem from="1653933599587" duration="26000" />
+      <workItem from="1653933649477" duration="2944000" />
+      <workItem from="1653947880977" duration="6536000" />
+      <workItem from="1659957930711" duration="1000" />
+      <workItem from="1659957950840" duration="6000" />
+      <workItem from="1659958018214" duration="4215000" />
+      <workItem from="1659966985059" duration="1643000" />
     </task>
     <servers />
   </component>

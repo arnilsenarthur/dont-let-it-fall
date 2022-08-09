@@ -11,6 +11,7 @@ namespace DontLetItFall.Utils
     {
         public QuestReward reward;
         public int amount;
+        public Sprite icon => reward.rewardIcon;
     }
     
     [System.Serializable]
@@ -39,16 +40,37 @@ namespace DontLetItFall.Utils
         [Header("About")]
         public string questName;
         public int questID;
-        [TextArea]
+        public Sprite questBanner;
+        [Space(1f)]
+        [TextArea(0,3)]
+        public string questResume;
+        [TextArea(5,15)]
         public string questDescription;
         [Range(1,10)]
         public int difficulty;
+        public int questStatus;
         public bool isCompleted;
 
         [Space] [Header("Stats")] 
         public WeatherEvent weatherEvent;
         public List<QuestTaskEntry> questTask;
         public List<QuestRewardsEntry> questRewards;
+        
+        public string GetDifficulty()
+        {
+            return ToRoman(difficulty);
+        }
+        
+        private string ToRoman(int number)
+        {
+            if (number < 1) return string.Empty;
+            if (number >= 10) return "X" + ToRoman(number - 10);
+            if (number >= 9) return "IX" + ToRoman(number - 9);
+            if (number >= 5) return "V" + ToRoman(number - 5);
+            if (number >= 4) return "IV" + ToRoman(number - 4);
+            if (number >= 1) return "I" + ToRoman(number - 1);
+            return string.Empty;
+        }
     }
     
     [CreateAssetMenu(fileName = "QuestList", menuName = "DLIF/Quest/QuestList", order = 0)]

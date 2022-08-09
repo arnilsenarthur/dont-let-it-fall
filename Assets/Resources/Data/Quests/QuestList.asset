@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f25e8e392eebf48a4b07903b227bca, type: 3}
   m_Name: QuestList
   m_EditorClassIdentifier: 
-  selectedQuest: 2
+  selectedQuest: 0
   entries:
   - questName: Balance the Ship
     questID: 0
+    questBanner: {fileID: 21300000, guid: f9e7855f45a0db64d95c5487452f8a5e, type: 3}
+    questResume: 
     questDescription: The ship is tipping over! Balance the cargo to survive!
     difficulty: 1
+    questStatus: 0
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
     questTask:
@@ -30,10 +33,15 @@ MonoBehaviour:
       amount: 200
     - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
       amount: 1
+    - reward: {fileID: 11400000, guid: 1e846886a02dd0641a4b75bcdb305a21, type: 2}
+      amount: 1
   - questName: Survive the Rain!
     questID: 1
+    questBanner: {fileID: 21300000, guid: 9635ab9d0451e2b4580a326b443ff046, type: 3}
+    questResume: 
     questDescription: '{s}'
     difficulty: 2
+    questStatus: 0
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 468112f94726eb746b983a02e9eed009, type: 2}
     questTask:
@@ -44,12 +52,13 @@ MonoBehaviour:
     questRewards:
     - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
       amount: 200
-    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
-      amount: 1
   - questName: Survive!
     questID: 2
+    questBanner: {fileID: 21300000, guid: cc657e85a0fb21c458ca6b7bf31500d8, type: 3}
+    questResume: 
     questDescription: '{d}'
     difficulty: 3
+    questStatus: 0
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
     questTask:
@@ -58,14 +67,15 @@ MonoBehaviour:
       target: {fileID: 0}
       amount: 3
     questRewards:
-    - reward: {fileID: 11400000, guid: 292fc0487ee76dd4eaf1bae6eab52f26, type: 2}
+    - reward: {fileID: 11400000, guid: 2f8c201f9bcb53c47b261f3c9abf77ee, type: 2}
       amount: 200
-    - reward: {fileID: 11400000, guid: e97dcf75bc555ed44a9523a3e37ffe15, type: 2}
-      amount: 1
   - questName: Balance the Ship
     questID: 3
+    questBanner: {fileID: 0}
+    questResume: 
     questDescription: The ship is tipping over! Balance the cargo to survive!
     difficulty: 3
+    questStatus: 0
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 468112f94726eb746b983a02e9eed009, type: 2}
     questTask:
@@ -80,8 +90,11 @@ MonoBehaviour:
       amount: 1
   - questName: Survive the Snow!
     questID: 4
+    questBanner: {fileID: 0}
+    questResume: 
     questDescription: '{s}'
     difficulty: 4
+    questStatus: 0
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 2fc75e61d31064b4b9f33765715484ec, type: 2}
     questTask:
@@ -96,8 +109,11 @@ MonoBehaviour:
       amount: 1
   - questName: Survive!
     questID: 5
+    questBanner: {fileID: 0}
+    questResume: 
     questDescription: '{d}'
     difficulty: 5
+    questStatus: 0
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
     questTask:
@@ -112,8 +128,11 @@ MonoBehaviour:
       amount: 1
   - questName: Balance the Ship
     questID: 6
+    questBanner: {fileID: 0}
+    questResume: 
     questDescription: The ship is tipping over! Balance the cargo to survive!
     difficulty: 5
+    questStatus: 0
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 468112f94726eb746b983a02e9eed009, type: 2}
     questTask:
@@ -128,8 +147,11 @@ MonoBehaviour:
       amount: 1
   - questName: Survive the Storm!
     questID: 7
+    questBanner: {fileID: 0}
+    questResume: 
     questDescription: '{s}'
     difficulty: 6
+    questStatus: 0
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 5000a4e3d6b1dc04ea0036ae8a7be464, type: 2}
     questTask:
@@ -144,8 +166,11 @@ MonoBehaviour:
       amount: 1
   - questName: Survive!
     questID: 8
+    questBanner: {fileID: 0}
+    questResume: 
     questDescription: '{d}'
     difficulty: 7
+    questStatus: 0
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 7f2140ee9ae4b6141a7d3e182a2ecfb1, type: 2}
     questTask:
@@ -160,8 +185,11 @@ MonoBehaviour:
       amount: 1
   - questName: Survive the Snowstorm!
     questID: 9
+    questBanner: {fileID: 0}
+    questResume: 
     questDescription: '{s}'
     difficulty: 8
+    questStatus: 0
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: fee8f8414dde8b44bb360d58304d911c, type: 2}
     questTask:
@@ -176,8 +204,11 @@ MonoBehaviour:
       amount: 1
   - questName: Don't Let It Fall
     questID: 10
+    questBanner: {fileID: 0}
+    questResume: 
     questDescription: Y'know
     difficulty: 10
+    questStatus: 0
     isCompleted: 0
     weatherEvent: {fileID: 11400000, guid: 295d547e0fb1119418eedc2c05fd61d0, type: 2}
     questTask:

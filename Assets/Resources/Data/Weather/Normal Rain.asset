@@ -15,7 +15,7 @@ MonoBehaviour:
   eventName: Normal Rain
   weatherEventType: 0
   particle: {fileID: 1335678618256672059, guid: 7caae2fa55885d54080f26931df2351d, type: 3}
-  icon: {fileID: 0}
+  icon: {fileID: -1899270874, guid: 37f5f85c2c8973e49b8eed823b71cd2f, type: 3}
   windForce: 5
   shipSwing: 15
   duration: {x: 0, y: 0}
