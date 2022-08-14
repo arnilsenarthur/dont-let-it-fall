@@ -114,7 +114,8 @@ public class OrbitalCamera : MonoBehaviour
 
     private void OrbitalTransform()
     {
-        ParentTransform.eulerAngles += (Vector3) CameraAxis;
+        ParentTransform.Rotate(new Vector3(CameraAxis.x,0,0), Space.Self);
+        ParentTransform.Rotate(new Vector3(0,CameraAxis.y,0), Space.World);
 
         if (AxisZ < 0)
         {
