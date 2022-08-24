@@ -3995,7 +3995,7 @@ MonoBehaviour:
   m_text: "Ent\xE3o voc\xEA entrega coisas?\npreciso que voc\xEA entregue algo especial
     para mim, \xE9 uma experiencia muito delicada!!!!!!\nDentro desta caixa contem
     um gato e uma substancia especial, ela precisa chegar intacta na brigada do comercio
-    central."
+    central. <sprite=\"bindings\" name=\"key_e\"></size>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 957b89cb5880c034bbe6d29957f5cc49, type: 2}
   m_sharedMaterial: {fileID: -6907318582774217313, guid: 957b89cb5880c034bbe6d29957f5cc49, type: 2}
@@ -14723,7 +14723,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1656397194}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16249,7 +16249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1266923047
 RectTransform:
   m_ObjectHideFlags: 0
