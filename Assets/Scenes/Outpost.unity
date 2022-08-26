@@ -2761,6 +2761,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 769424283}
     m_Modifications:
+    - target: {fileID: 893521793690511259, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5434955
+      objectReference: {fileID: 0}
+    - target: {fileID: 893521793690511259, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 893521793690511259, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
+      propertyPath: m_Color.r
+      value: 0.12156862
+      objectReference: {fileID: 0}
     - target: {fileID: 1256544539567826690, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
       propertyPath: _data._taskName
       value: Busque no GoBling!
@@ -2883,9 +2895,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4447228117530500581, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
+      propertyPath: m_text
+      value: Busque no GoBling!
+      objectReference: {fileID: 0}
     - target: {fileID: 7949897331972218352, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
       propertyPath: m_Name
       value: TaskLetter (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639904163345932579, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
+      propertyPath: m_text
+      value: "GoBling! Companhia Limitada.\n\nPrecisamos que os novos servidores
+        sejam entregues para o nosso novo predio na Cidadela, tome cuidado pois s\xE3o
+        muito frageis e caros!\n \nPagamento: 1200C\nSeguro: 4000C\nDistancia: 4.421Km\nRecompensa:
+        Caixas de Carv\xE3o "
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
@@ -14456,6 +14479,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 769424283}
     m_Modifications:
+    - target: {fileID: 893521793690511259, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893521793690511259, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7533746
+      objectReference: {fileID: 0}
     - target: {fileID: 1256544539567826690, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
       propertyPath: _data._taskName
       value: Cidadela do Comercio
@@ -14584,9 +14615,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4447228117530500581, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
+      propertyPath: m_text
+      value: Cidadela do Comercio
+      objectReference: {fileID: 0}
     - target: {fileID: 7949897331972218352, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
       propertyPath: m_Name
       value: TaskLetter (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639904163345932579, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
+      propertyPath: m_text
+      value: "Encomenda Especial da C.C\n\nA Cidadela do Comercio necessita que a
+        sua nova leva de Cadeiras de Prata seja entregue para a sua proxima grande
+        festa.\n\nAss: Diretor Geral da Cidadela do Comercio.\n \nPagamento: 956
+        C\nSeguro: 2400C\nDistancia: 4.421Km\nRecompensa: Reforma do Navio"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
@@ -16249,7 +16291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1266923047
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23360,14 +23402,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 769424283}
     m_Modifications:
-    - target: {fileID: 893521793690511259, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
-      propertyPath: m_Color.b
-      value: 0.12099999
-      objectReference: {fileID: 0}
-    - target: {fileID: 893521793690511259, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
-      propertyPath: m_Color.g
-      value: 0.12099999
-      objectReference: {fileID: 0}
     - target: {fileID: 2725970120094864687, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -23455,12 +23489,6 @@ PrefabInstance:
     - target: {fileID: 7949897331972218352, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
       propertyPath: m_Name
       value: TaskLetter
-      objectReference: {fileID: 0}
-    - target: {fileID: 8639904163345932579, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
-      propertyPath: m_text
-      value: "Precisamos de ajuda para levar o nosso polvo de estimac\xE3o para a
-        nossa nova localizac\xE3o, receberemos no posto mercante do sudeste.\n \nPagamento:
-        240 C\nSeguro: 430 C\nDistancia: 2.340Km\nRecompensa: Tripulante Palhaco"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c017a5e8e723cb4ca82407f42d0f841, type: 3}
