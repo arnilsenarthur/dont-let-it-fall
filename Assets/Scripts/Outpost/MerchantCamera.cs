@@ -77,5 +77,7 @@ namespace DontLetItFall.Outpost
                 gameObject.SetActive(false);
             }
         }
+        
+        //☻
     }
 }
