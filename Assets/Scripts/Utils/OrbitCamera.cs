@@ -34,20 +34,22 @@ public class OrbitCamera : MonoBehaviour
 
     private void OnEnable()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void OnDisable()
     {
-        Cursor.lockState = CursorLockMode.None;
+        //Cursor.lockState = CursorLockMode.None;
     }
 
     void LateUpdate()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
         }
+        */
 
         distance -= Input.GetAxis("Mouse ScrollWheel") * scrollSpeed;
         distance = Mathf.Clamp(distance, minDistance, maxDistance);
@@ -64,7 +66,7 @@ public class OrbitCamera : MonoBehaviour
             // comment out these two lines if you don't want to hide mouse curser or you have a UI button 
             //Cursor.visible = false;
 
-            if (Cursor.lockState == CursorLockMode.Locked)
+            if (Input.GetMouseButton(1))
             {
                 x += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
                 y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
