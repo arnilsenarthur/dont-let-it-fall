@@ -197,8 +197,6 @@ namespace DontLetItFall.Entity.Player
                     if (grabbedObject != null && grabbedObject != limb.currentObject)
                         return;
 
-
-
                     Rigidbody rigidbody = limb.currentObject.GetComponent<Rigidbody>();
                     grabbedWeight.value = rigidbody.mass;
                     

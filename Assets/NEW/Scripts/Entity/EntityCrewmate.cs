@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using DontLetItFall.Utils;
 using DontLetItFall.Variables;
@@ -26,14 +27,25 @@ namespace New.Entity
     {
         Idle,
         Walking,
+        Grab,
+        Drop
     }
 
     public class EntityCrewmate : Selectable
     { 
+        public const float PATH_CHECK_INTERVAL = 1F;
+
         public Transform marker;
         public Action action = Action.Idle;
         public Rigidbody bodyHips;
         public Vector3 defaultBodyHipsRotation = new Vector3(0f, 0f, 0f);
+
+        public NavMeshAgent agent;
+        public Transform ship;
+        public Transform targetHolder;
+
+        public GameObject targetGrabbableObject;
+        public GameObject grabbedObject;
     
         #region Public Properties
         public bool Assembled
@@ -58,6 +70,7 @@ namespace New.Entity
         public Limb[] limbs;
         public GameObject limbsParent;
         public int headIndex = 0;
+        public EntityGrabLimb[] grabLimbs;
 
         [Header("STATE")]
         public bool isGrounded = false;
@@ -68,13 +81,13 @@ namespace New.Entity
         private bool _assembled = true;
         private Rigidbody _rigidbody;
         private Vector3 _bodyHipsOffset;
-        private NavMeshAgent _agent;
+        private float _lastWalkStart = 0; 
+        private float _lastPathCheck = 0;
         #endregion
 
         #region Unity Callbacks
         private void Start()
         {
-            _agent = GetComponent<NavMeshAgent>();
             _rigidbody = GetComponent<Rigidbody>();
             _startLimbRotations = new Quaternion[limbs.Length];
             for (int i = 0; i < limbs.Length; i++)
@@ -86,20 +99,33 @@ namespace New.Entity
 
             SetAssembled(true);
 
-            _agent.updatePosition = false;
-            _agent.updateRotation = false;
-            _agent.speed = walkSpeed.value;
+            agent.updatePosition = true;
+            agent.updateRotation = true;
+        }
+
+        private void OnEnable()
+        {
+            if(targetHolder == null)
+            {
+                targetHolder = new GameObject().transform;
+                targetHolder.parent = transform.parent;
+                targetHolder.name = $"{name}:Target";
+            } 
+
+            targetHolder.parent = ship;
+        }
+
+        private void OnDisable() 
+        {
+            if(targetHolder != null)
+                Destroy(targetHolder.gameObject);
         }
 
         private void Update()
         {
-            /*
-            if (Input.GetKeyDown(KeyCode.J))
-                SetAssembled(!_assembled);*/
-
             marker.LookAt(Camera.main.transform);
 
-            bool walking = action == Action.Walking && _agent.remainingDistance > 0.5f;
+            bool walking = (action != Action.Idle) && agent.remainingDistance > 0.5f;
 
             #region Animation
             if (_assembled)
@@ -147,9 +173,6 @@ namespace New.Entity
                     groundNormal = hit.normal;
                 }
                 #endregion
-
-                //velocity.y = Mathf.Max(velocity.y, 0f);
-                //velocity -= groundNormal * 9.81f * Time.fixedDeltaTime;
             }
             else
             {
@@ -178,24 +201,72 @@ namespace New.Entity
                     break;
 
                 case Action.Walking:
-                    float angle = Vector3.SignedAngle(Vector3.forward, _agent.desiredVelocity.normalized, Vector3.up);
-                    float nAngle = Mathf.LerpAngle(transform.eulerAngles.y, angle, Time.fixedDeltaTime * 3f);
-
-                    transform.eulerAngles = new Vector3(0, nAngle,0);
-                    //_rigidbody.MoveRotation(transform.rotation * Quaternion.Euler(0, nAngle - transform.eulerAngles.y, 0));
-                    velocity.x = _agent.desiredVelocity.normalized.x * GetWalkSpeed();
-                    velocity.z = _agent.desiredVelocity.normalized.z * GetWalkSpeed();
-
-                    _rigidbody.velocity = velocity;
-                    _agent.velocity = _rigidbody.velocity;
-
-                    if(_agent.remainingDistance < 1f)
+                case Action.Drop:
                     {
-                        action = Action.Idle;
-                        _agent.Warp(transform.position);
+                        Vector3 tpos = agent.transform.position;
+                        Vector3 deltaPos = (tpos - transform.position);
+                        Vector3 fw = new Vector3(deltaPos.x, 0, deltaPos.z).normalized;
+                        float angle = Vector3.SignedAngle(Vector3.forward, fw, Vector3.up);
+                        float nAngle = Mathf.LerpAngle(transform.eulerAngles.y, angle, Time.fixedDeltaTime * 3f);
+                        transform.eulerAngles = new Vector3(0, nAngle,0);
+
+                        float walkSpeed = GetWalkSpeed();
+                        
+                        agent.speed = deltaPos.magnitude > 1f ? 0 : walkSpeed;
+
+                        velocity.x = deltaPos.normalized.x * walkSpeed;
+                        velocity.z = deltaPos.normalized.z * walkSpeed;
+
+                        if(agent.remainingDistance < 0.25f && Time.time > _lastWalkStart + 0.5f)
+                        {
+                            if(action == Action.Drop)
+                                ReleaseObject();
+
+                            action = Action.Idle;
+                            agent.Warp(transform.position);
+                        }
+                        else if(_lastPathCheck + PATH_CHECK_INTERVAL < Time.time)
+                        {
+                            _lastPathCheck = Time.time;
+                            agent.SetDestination(targetHolder.position);
+                        }
                     }
                     break;
-            }           
+
+                case Action.Grab:
+                    {
+                        Vector3 tpos = agent.transform.position;
+                        Vector3 deltaPos = (tpos - transform.position);
+                        Vector3 fw = new Vector3(deltaPos.x, 0, deltaPos.z).normalized;
+                        float angle = Vector3.SignedAngle(Vector3.forward, fw, Vector3.up);
+                        float nAngle = Mathf.LerpAngle(transform.eulerAngles.y, angle, Time.fixedDeltaTime * 3f);
+                        transform.eulerAngles = new Vector3(0, nAngle,0);
+
+                        float walkSpeed = GetWalkSpeed();
+                        
+                        agent.speed = deltaPos.magnitude > 1f ? 0 : walkSpeed;
+
+                        velocity.x = deltaPos.normalized.x * walkSpeed;
+                        velocity.z = deltaPos.normalized.z * walkSpeed;
+
+                        if(Vector3.Distance(transform.position, targetGrabbableObject.transform.position) < 1f && Time.time > _lastWalkStart + 0.5f)
+                        {
+                            GrabObject(targetGrabbableObject);
+                            targetGrabbableObject = null;
+                            action = Action.Idle;
+                            agent.Warp(transform.position);
+                        }
+                        else if(_lastPathCheck + PATH_CHECK_INTERVAL < Time.time)
+                        {
+                            targetHolder.position = targetGrabbableObject.transform.position;
+                            _lastPathCheck = Time.time;
+                            agent.SetDestination(targetHolder.position);
+                        }
+                    }
+                    break;
+            }      
+
+             _rigidbody.velocity = velocity;     
         }
         #endregion
 
@@ -224,15 +295,27 @@ namespace New.Entity
 
         public override bool OnClick(Vector3 position, Vector3 normal, GameObject gameObject)
         {
-            if(action == Action.Idle)
+            //if(action == Action.Idle)
             {   
                 if(gameObject.tag == "Ship")
                 {
-                    action = Action.Walking;
-                    _agent.Warp(transform.position);
-                    _agent.SetDestination(position);
+                    agent.Warp(transform.position);
+                    targetHolder.position = position;
+                    agent.SetDestination(targetHolder.position);
+                    action = grabbedObject == null ? Action.Walking : Action.Drop;
+                    _lastWalkStart = _lastPathCheck = Time.time;
                     return true;
-                }      
+                }   
+
+                if(gameObject.tag == "Grabbable" && grabbedObject == null)
+                {
+                    agent.Warp(transform.position);
+                    targetHolder.position = gameObject.transform.position;
+                    agent.SetDestination(targetHolder.position);
+                    action = Action.Grab;
+                    _lastWalkStart = _lastPathCheck = Time.time;
+                    this.targetGrabbableObject = gameObject;
+                }   
             }
 
             return false;
@@ -247,5 +330,53 @@ namespace New.Entity
         {
             marker.gameObject.SetActive(false);
         }
+
+        #region Grabbing Things
+        public void GrabObject(GameObject grabbableObject)
+        {
+            if(grabbedObject != null)
+                return;
+
+            grabbedObject = grabbableObject;
+            Rigidbody rigidbody = grabbedObject.GetComponent<Rigidbody>();
+            Debug.Log("Grabbed " + grabbedObject.name);
+            rigidbody.mass *= 0.1f;
+
+            foreach (EntityGrabLimb limb in grabLimbs)
+            {
+                ConfigurableJoint joint = grabbedObject.AddComponent<ConfigurableJoint>();
+                joint.anchor = new Vector3(0, 0, 0);
+                joint.xMotion = ConfigurableJointMotion.Locked;
+                joint.yMotion = ConfigurableJointMotion.Locked;
+                joint.zMotion = ConfigurableJointMotion.Locked;
+                joint.angularXMotion = ConfigurableJointMotion.Locked;
+                joint.angularYMotion = ConfigurableJointMotion.Locked;
+                joint.angularZMotion = ConfigurableJointMotion.Locked;
+                joint.targetPosition = new Vector3(0, 0, 0);
+                joint.connectedBody = limb.hand;
+                //joint.projectionDistance = 0.5f;
+                //joint.linearLimit = new SoftJointLimit() { limit = 0.5f };
+            } 
+        }
+
+        public void ReleaseObject()
+        {
+            if (grabbedObject != null)
+            {
+                foreach (Joint joint in grabbedObject.GetComponents<Joint>())
+                    Destroy(joint);
+
+                Rigidbody rigidbody = grabbedObject.GetComponent<Rigidbody>();
+                Debug.Log("Releasing: " + rigidbody.mass);
+                rigidbody.mass *= 10f;
+
+                //grabbedWeight.value = 0;
+                grabbedObject = null;
+
+                //for (int i = 0; i < grabLimbs.Length; i++)
+                //grabLimbsGrabbing[i] = false;
+            }
+        }
+        #endregion
     }
 }
